@@ -528,14 +528,7 @@ var _Navigator = (function () {
                         if (_currentPageId == "p46") {
                             showQuestion();
                         }
-                        if (_currentPageObject.pageId == "p2")
-                            setReader("titleheader");
-                        else {
-                            //if($("body").hasClass("no-focus"))
-                            {
-                                setReader("titleheader");
-                            }
-                        }
+                       
                         $("#hintdiv").show();
                         if (_currentPageObject.hideHint != undefined && _currentPageObject.hideHint) {
                             $("#hintdiv").hide();
@@ -549,6 +542,9 @@ var _Navigator = (function () {
                         if ((/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent))) {
                             $('#footer-navigation').css('display', 'table');
                         }
+                        setReader("titleheader");
+                        
+                       
                     });
                 })
             }
