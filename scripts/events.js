@@ -168,9 +168,9 @@ $(document).on('click', ".buttonlink", function (event) {
         }
         if (nextPageId != "" && nextPageId != undefined) {
             // _Navigator.Next(); 
-            _Navigator.LoadPage(nextPageId)              
+            _Navigator.LoadPage(nextPageId);              
         }
-    } 
+    }
 });
 
 $(document).on('click', ".inputcircle", function (event) {

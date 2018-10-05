@@ -84,7 +84,7 @@ var _Navigator = (function () {
             dataurl: "p9.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p10": {
             pageId: "p10",
@@ -93,7 +93,7 @@ var _Navigator = (function () {
             dataurl: "p10.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p11": {
             pageId: "p11",
@@ -102,7 +102,7 @@ var _Navigator = (function () {
             dataurl: "p11.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p12": {
             pageId: "p12",
@@ -111,7 +111,7 @@ var _Navigator = (function () {
             dataurl: "p12.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p13": {
             pageId: "p13",
@@ -121,7 +121,7 @@ var _Navigator = (function () {
             // hinturl: "",
             hasActivity: true,
             isFinish: "level2",
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p14": {
             pageId: "p14",
@@ -221,7 +221,7 @@ var _Navigator = (function () {
             dataurl: "p25.htm",
             hinturl: "hintp25.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop"
+            accessText: "macOS Sierra Desktop"
         },
         "p26": {
             pageId: "p26",
@@ -230,7 +230,7 @@ var _Navigator = (function () {
             dataurl: "p26.htm",
             hinturl: "hintp26.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop"
+            accessText: "macOS Sierra Desktop"
         },
         "p27": {
             pageId: "p27",
@@ -239,7 +239,7 @@ var _Navigator = (function () {
             dataurl: "p27.htm",
             hinturl: "hintp27.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with File menu open"
+            accessText: "macOS Sierra Desktop with File menu open"
         },
         "p28": {
             pageId: "p28",
@@ -248,7 +248,7 @@ var _Navigator = (function () {
             dataurl: "p28.htm",
             hinturl: "hintp28.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p29": {
             pageId: "p29",
@@ -257,7 +257,7 @@ var _Navigator = (function () {
             dataurl: "p29.htm",
             hinturl: "hintp29.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p30": {
             pageId: "p30",
@@ -266,7 +266,7 @@ var _Navigator = (function () {
             dataurl: "p30.htm",
             hinturl: "hintp30.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p31": {
             pageId: "p31",
@@ -275,7 +275,7 @@ var _Navigator = (function () {
             dataurl: "p31.htm",
             hinturl: "hintp31.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p32": {
             pageId: "p32",
@@ -284,7 +284,7 @@ var _Navigator = (function () {
             dataurl: "p32.htm",
             hinturl: "hintp32.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p33": {
             pageId: "p33",
@@ -357,7 +357,7 @@ var _Navigator = (function () {
             dataurl: "p40.htm",
             hinturl: "hintp40.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop"
+            accessText: "macOS Sierra Desktop"
         },
         "p41": {
             pageId: "p41",
@@ -366,7 +366,7 @@ var _Navigator = (function () {
             dataurl: "p41.htm",
             hinturl: "hintp41.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with Apple menu open"
+            accessText: "macOS Sierra Desktop with Apple menu open"
         },
         "p42": {
             pageId: "p42",
@@ -375,7 +375,7 @@ var _Navigator = (function () {
             dataurl: "p42.htm",
             hinturl: "hintp42.htm",
             hasActivity: true,
-            accessText: "Mac OS Sierra Desktop with System Preferences Window open"
+            accessText: "macOS Sierra Desktop with System Preferences Window open"
         },
         "p43": {
             pageId: "p43",
@@ -385,7 +385,7 @@ var _Navigator = (function () {
             hinturl: "hintp43.htm",
             hasActivity: true,
             isFinish: "level6",
-            accessText: "Mac OS Sierra Desktop with Desktop and Screen Saver window open"
+            accessText: "macOS Sierra Desktop with Desktop and Screen Saver window open"
         },
         "p44": {
             pageId: "p44",
@@ -405,7 +405,7 @@ var _Navigator = (function () {
             hinturl: "hintp45.htm",
             hasActivity: true,
             isDnd: true,
-            accessText: "Mac OS Sierra Desktop with Finder Window open"
+            accessText: "macOS Sierra Desktop with Finder Window open"
         },
         "p46": {
             pageId: "p46",
@@ -511,14 +511,14 @@ var _Navigator = (function () {
             if (_currentPageObject.isStartPage) {
                 $(".main-content").load(pageUrl, function () {
                     OnPageLoad();
-                    setReader("header1");
+                    
                     if (presentermode) {
                         $("footer").show();
                         _ModuleCommon.PresenterMode();
                         $(".startbtn").k_disable();
 
                     }
-
+                    setReader("header1");
                 });
             } else {
                 $(".main-content").fadeTo(250, 0.25, function () {
@@ -543,8 +543,9 @@ var _Navigator = (function () {
                             $('#footer-navigation').css('display', 'table');
                         }
                         setReader("titleheader");
-                        
-                       
+                        if (_currentPageObject.pageId == "p18" || _currentPageObject.pageId == "p28") {
+                            $('input[type=text]').focus();
+                        }
                     });
                 })
             }
@@ -704,8 +705,8 @@ var _Navigator = (function () {
 
 
 function setReader(idToStartReading) {
-    $('#hiddenAnchor').attr("href", "#" + idToStartReading)
-    $('#hiddenAnchor')[0].click()
+    $('#hiddenAnchor').attr("href", "#" + idToStartReading);
+    $('#hiddenAnchor')[0].click();
 }
 
 

@@ -81,7 +81,7 @@ div, p, span, input {
     button:active, textarea:active, select:active,
     .questioninnerwrapper input[type="radio"]:focus + .inputcircle::after,
     #Summary input[type="radio"]:focus + .inputcircle::after {
-    outline: rgb(59, 153, 252) auto 4px;
+    outline: #ff8c00 auto 4px;
     }
 
 #appmenu *:focus, #appmenu *:active {
