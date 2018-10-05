@@ -115,8 +115,8 @@ var _ModuleCommon = (function () {
                 }
             }
             this.ShowFeedbackReviewMode();
-            $(".divHotSpot").addClass("disabled").attr("disabled","true");
-            $(".divHotSpotDbClick").addClass("disabled").attr("disabled","true");
+            $(".divHotSpot").k_disable();
+            $(".divHotSpotDbClick").k_disable();
         },
         InstructorReviewModeForTextEntry: function () {
             $(".EmbededElement").hide();
@@ -263,8 +263,8 @@ var _ModuleCommon = (function () {
         },
         OnContinue: function () {
 
-            $('.divHotSpot').removeClass('hotspotclicked')
-            $(".divHotSpot").k_enable().removeAttr("disabled");
+            $('.divHotSpot').removeClass('hotspotclicked').k_enable()
+            $(".divHotSpot").k_enable();
 
             $("#div_feedback .div_fdkcontent").html("");
             $("#div_feedback").hide();
@@ -498,7 +498,7 @@ var _ModuleCommon = (function () {
                     }
                 }
             }
-            $(".divHotSpot, .divHotSpotdbl").addClass("disabled").attr("disabled","true");
+            $(".divHotSpot, .divHotSpotdbl").k_disable();
             $("#linknext").k_enable();
             mTreeObj.AppendFooter();
         },
@@ -556,7 +556,7 @@ var _ModuleCommon = (function () {
                         _Navigator.SetPageStatus(false);
                         this.HotspotFeedback(_hotspot);
                         this.DisableNext();
-                        $('.divHotSpot').k_disable().attr("disabled","true");
+                        $('.divHotSpot').k_disable();
                     }
                 default:
                     break;
@@ -582,6 +582,7 @@ var _ModuleCommon = (function () {
             this.EnableNext();
         },
         HotspotFeedback: function (_hotspot) {
+            $(".divHotSpot").k_disable();
             var pageData = this.GetPageDetailData();
             var url = "";
             if (pageData.ImageHotSpots != undefined) {
@@ -673,8 +674,8 @@ var _ModuleCommon = (function () {
                 }
             }
             else {
-                $(".divHotSpot").removeClass("disabled").removeAttr("disabled");
-                $(".divHotSpot").removeClass("hotspotclicked").removeAttr("disabled");
+                $(".divHotSpot").k_enable();
+                $(".divHotSpot").removeClass("hotspotclicked").k_enable();
             }
         }
     }

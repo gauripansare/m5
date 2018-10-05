@@ -10,7 +10,7 @@ var _Navigator = (function () {
         "p1": {
             pageId: "p1",
             prevPageId: "",
-            nextPageId: "p2",
+            nextPageId: "p46",
             dataurl: "p1.htm",
             isStartPage: true,
             isAnswered: true,
@@ -448,6 +448,7 @@ var _Navigator = (function () {
             return progressLevels;
         },
         LoadPage: function (pageId, jsonObj) {
+            debugger;
             if (jsonObj == undefined) {
                 jsonObj = {};
             }
@@ -523,7 +524,7 @@ var _Navigator = (function () {
             } else {
                 $(".main-content").fadeTo(250, 0.25, function () {
                     $(".main-content").load(pageUrl, function () {
-                        $(this).fadeTo(600, 1)
+                        $(this).fadeTo(600, 1 ,function(){
                         OnPageLoad();
                         if (_currentPageId == "p46") {
                             showQuestion();
@@ -540,12 +541,23 @@ var _Navigator = (function () {
                             $(".hintcontent").load("pagedata/hintdata/" + _currentPageObject.hinturl, function () { });
                         }
                         if ((/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent))) {
-                            $('#footer-navigation').css('display', 'table');
+                            $('#footer-navigation').css('display', 'table');                           
+                            
                         }
-                        setReader("titleheader");
+
+                        if(_currentPageId == "p2")
+                        {
+                            $("#titleheader").focus();
+                        }
+                        else
+                        {
+                            $("#progressdiv").focus();
+                        }
+                       
                         if (_currentPageObject.pageId == "p18" || _currentPageObject.pageId == "p28") {
                             $('input[type=text]').focus();
                         }
+                    })
                     });
                 })
             }
