@@ -519,7 +519,7 @@ var _Navigator = (function () {
                         $(".startbtn").k_disable();
 
                     }
-                    setReader("header1");
+                    $("#header1").focus();
                 });
             } else {
                 $(".main-content").fadeTo(250, 0.25, function () {
