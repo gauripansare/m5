@@ -9,7 +9,7 @@
 var _Settings = {
   dataRoot: "pagedata/",
   assetsRoot: "assets/",
-  enableCache: true,
+  enableCache: false,
   topMargin: 144,
   minHeight: 437
 }

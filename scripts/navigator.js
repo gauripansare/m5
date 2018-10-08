@@ -448,7 +448,6 @@ var _Navigator = (function () {
             return progressLevels;
         },
         LoadPage: function (pageId, jsonObj) {
-            debugger;
             if (jsonObj == undefined) {
                 jsonObj = {};
             }
@@ -501,7 +500,6 @@ var _Navigator = (function () {
 
 
             _currentPageObject.isVisited = true;
-
             var pageUrl = _Settings.dataRoot + _currentPageObject.dataurl + _Caching.GetUrlExtension();
             if (_currentPageObject.pageId == "p2") { // temporary fix
                 $("#progressdiv").css("margin-left", "-20px")
@@ -519,7 +517,7 @@ var _Navigator = (function () {
                         $(".startbtn").k_disable();
 
                     }
-                    $("#header1").focus();
+                    $("#titleheader").focus();
                 });
             } else {
                 $(".main-content").fadeTo(250, 0.25, function () {
