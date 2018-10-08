@@ -10,7 +10,7 @@ var _Navigator = (function () {
         "p1": {
             pageId: "p1",
             prevPageId: "",
-            nextPageId: "p46",
+            nextPageId: "p2",
             dataurl: "p1.htm",
             isStartPage: true,
             isAnswered: true,
