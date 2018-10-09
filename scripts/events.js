@@ -42,7 +42,7 @@ $(document).on("click", ".divHotSpot", function (event) {
     },400)
     
 });
-$(document).on("dblclick", ".divHotSpotDbClick", function (event) {
+$(document).on("dblclick touchend", ".divHotSpotDbClick", function (event) {
     if(_Navigator.IsPresenterMode()){
         return;
     }
@@ -59,6 +59,19 @@ $(document).on("dblclick", ".divHotSpotDbClick", function (event) {
        
     },400)
     
+});
+$(document).on("keydown", ".divHotSpotDbClick", function (event) {
+    if(_Navigator.IsPresenterMode()){
+        return;
+    }
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (event) {
+        key = event.keyCode;
+    }
+    if (key == 13) {
+        $(this).trigger("dblclick");
+    }
 });
 
 $(document).on("click", "#linkprevious", function (event) {
