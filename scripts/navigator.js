@@ -542,10 +542,23 @@ var _Navigator = (function () {
                             $('#footer-navigation').css('display', 'table');                           
                             
                         }
-
+                        if(navigator.userAgent.match(/iPad/i) == null)
+                            {
+                                $(".hintlinkspan").attr("aria-hidden","true");
+                            }
                         if(_currentPageId == "p2")
                         {
                             $("#titleheader").focus();
+                            if(navigator.userAgent.match(/iPad/i) == null)
+                            {
+                                var i = 1; 
+                                $(".buttonlink").each(function(){
+                                    var aria_label = $("label[for='"+$(this).attr("id")+"'").html();
+                                    $(this).attr("aria-label",aria_label);
+                                    $("label[for='"+$(this).attr("id")+"'").attr("aria-hidden","true");
+                                    i++;
+                                })
+                            }
                         }
                         else
                         {
