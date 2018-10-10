@@ -8,7 +8,9 @@
     k_IsDisabled: function () {
         if (this.hasClass('disabled')) { return true; } else { return false; }
     }
+
 });
+
 var _ModuleCommon = (function () {
     var reviewData = [];
     return {
@@ -476,7 +478,12 @@ var _ModuleCommon = (function () {
                             pleft = getPerc(Number(hotspotdata.Hotspots[i].left.replace("px", "").replace("%", "")), orw) + "%";
                             ptop = getPerc(Number(hotspotdata.Hotspots[i].top.replace("px", "").replace("%", "")), orh) + "%";
                         }
-                        htmlForDivHotspotImage += "<button type='button' hsId='" + hsId + "'  id='divHotspots" + i + "_" + hsId + "' class='" + hotspotdata.Hotspots[i].HotspotClass + "' style=' width:" + pwdth + ";height:" + phight + ";left:" + pleft + ";top:" + ptop + ";' action='" + hotspotdata.Hotspots[i].action + "' role='button' aria-label='" + accessText + "'/>";
+                        if (isIOS || Macbrowser || Macos || isSafari || isIpad || isIphone) {
+                            htmlForDivHotspotImage += "<button type='button' hsId='" + hsId + "'  id='divHotspots" + i + "_" + hsId + "' class='divHotSpot' style=' width:" + pwdth + ";height:" + phight + ";left:" + pleft + ";top:" + ptop + ";' action='" + hotspotdata.Hotspots[i].action + "' role='button' aria-label='" + accessText + "'/>";
+                        }
+                        else {
+                            htmlForDivHotspotImage += "<button type='button' hsId='" + hsId + "'  id='divHotspots" + i + "_" + hsId + "' class='" + hotspotdata.Hotspots[i].HotspotClass + "' style=' width:" + pwdth + ";height:" + phight + ";left:" + pleft + ";top:" + ptop + ";' action='" + hotspotdata.Hotspots[i].action + "' role='button' aria-label='" + accessText + "'/>";
+                        }
                     }
                     $(".wrapperimage").append(htmlForDivHotspotImage)
                 }

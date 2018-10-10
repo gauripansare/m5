@@ -542,10 +542,7 @@ var _Navigator = (function () {
                             $('#footer-navigation').css('display', 'table');                           
                             
                         }
-                        if(navigator.userAgent.match(/iPad/i) == null)
-                            {
-                                $(".hintlinkspan").attr("aria-hidden","true");
-                            }
+                        
                         if(_currentPageId == "p2")
                         {
                             $("#titleheader").focus();
