@@ -130,8 +130,8 @@
 
 .input-url2 {
     position: absolute;
-    top: 318px;
-    left: 590px;
+    top: 231px;
+    left: 210px;
     text-align: center;
     width: 73px;
     font-size: 11px;
@@ -381,8 +381,8 @@
     } 
     .firefox_image{
         position: absolute;
-        top: 413px;
-        left: 321px; 
+        top: 268px;
+        left: 212px; 
     }
     .dock_taskbar{
         position: absolute;
@@ -395,8 +395,8 @@
     {
         position: absolute;
         width: 370px;
-        height: 50px;
-        top: 550px;
+        height: 47px;
+        top: 452px;
         left: 285px; 
     }
 

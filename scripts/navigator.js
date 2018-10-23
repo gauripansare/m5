@@ -510,7 +510,7 @@ var _Navigator = (function () {
             if (_currentPageObject.isStartPage) {
                 $(".main-content").load(pageUrl, function () {
                     OnPageLoad();
-                    
+
                     if (presentermode) {
                         $("footer").show();
                         _ModuleCommon.PresenterMode();
@@ -522,50 +522,60 @@ var _Navigator = (function () {
             } else {
                 $(".main-content").fadeTo(250, 0.25, function () {
                     $(".main-content").load(pageUrl, function () {
-                        $(this).fadeTo(600, 1 ,function(){
-                        OnPageLoad();
-                        if (_currentPageId == "p46") {
-                            showQuestion();
-                        }
-                       
-                        $("#hintdiv").show();
-                        if (_currentPageObject.hideHint != undefined && _currentPageObject.hideHint) {
-                            $("#hintdiv").hide();
-                        }
-                        if (presentermode) {
-                            _ModuleCommon.PresenterMode();
-                        }
-                        if (_currentPageObject.hinturl != undefined) {
-                            $(".hintcontent").load("pagedata/hintdata/" + _currentPageObject.hinturl, function () { });
-                        }
-                        if ((/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent))) {
-                            $('#footer-navigation').css('display', 'table');                           
-                            
-                        }
-                        
-                        if(_currentPageId == "p2")
-                        {
-                            $("#titleheader").focus();
-                            if(navigator.userAgent.match(/iPad/i) == null)
-                            {
-                                var i = 1; 
-                                $(".buttonlink").each(function(){
-                                    var aria_label = $("label[for='"+$(this).attr("id")+"'").html();
-                                    $(this).attr("aria-label",aria_label);
-                                    $("label[for='"+$(this).attr("id")+"'").attr("aria-hidden","true");
-                                    i++;
-                                })
+                        $(this).fadeTo(600, 1, function () { });
+                            //
+                            debugger;
+                            if ($(".activityimg").length > 0) {
+                                $('.activityimg').load(function () {
+                                    OnPageLoad();
+                                });
                             }
-                        }
-                        else
-                        {
-                            $("#progressdiv").focus();
-                        }
+                            else {
+                                OnPageLoad();
+                            }
+                            //
+
+
+
+                            if (_currentPageId == "p46") {
+                                showQuestion();
+                            }
+
+                            $("#hintdiv").show();
+                            if (_currentPageObject.hideHint != undefined && _currentPageObject.hideHint) {
+                                $("#hintdiv").hide();
+                            }
+                            if (presentermode) {
+                                _ModuleCommon.PresenterMode();
+                            }
+                            if (_currentPageObject.hinturl != undefined) {
+                                $(".hintcontent").load("pagedata/hintdata/" + _currentPageObject.hinturl, function () { });
+                            }
+                            if ((/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent))) {
+                                $('#footer-navigation').css('display', 'table');
+
+                            }
+
+                            if (_currentPageId == "p2") {
+                                $("#titleheader").focus();
+                                if (navigator.userAgent.match(/iPad/i) == null) {
+                                    var i = 1;
+                                    $(".buttonlink").each(function () {
+                                        var aria_label = $("label[for='" + $(this).attr("id") + "'").html();
+                                        $(this).attr("aria-label", aria_label);
+                                        $("label[for='" + $(this).attr("id") + "'").attr("aria-hidden", "true");
+                                        i++;
+                                    })
+                                }
+                            }
+                            else {
+                                $("#progressdiv").focus();
+                            }
+
+                            if (_currentPageObject.pageId == "p18" || _currentPageObject.pageId == "p28") {
+                                $('input[type=text]').focus();
+                            }
                        
-                        if (_currentPageObject.pageId == "p18" || _currentPageObject.pageId == "p28") {
-                            $('input[type=text]').focus();
-                        }
-                    })
                     });
                 })
             }
