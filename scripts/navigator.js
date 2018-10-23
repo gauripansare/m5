@@ -524,7 +524,6 @@ var _Navigator = (function () {
                     $(".main-content").load(pageUrl, function () {
                         $(this).fadeTo(600, 1, function () { });
                             //
-                            debugger;
                             if ($(".activityimg").length > 0) {
                                 $('.activityimg').load(function () {
                                     OnPageLoad();
