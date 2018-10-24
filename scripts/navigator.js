@@ -223,6 +223,15 @@ var _Navigator = (function () {
             hasActivity: true,
             accessText: "macOS Sierra Desktop"
         },
+        "p25Next": {
+            pageId: "p25Next",
+            prevPageId: "p25",
+            nextPageId: "p26",
+            dataurl: "p25Next.htm",
+            hinturl: "hintp25Next.htm",
+            hasActivity: true,
+            accessText: "macOS Sierra Desktop with File menu open"
+        },
         "p26": {
             pageId: "p26",
             prevPageId: "p25",
@@ -468,7 +477,11 @@ var _Navigator = (function () {
                 _NData["p40"].nextPageId = "p41";
                 _NData["p43"].prevPageId = "p41";
             }
-
+            if (_currentPageId == "p25Next" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
+                progressLevels[0] = (progressLevels[0] + 1);
+                _NData["p25"].nextPageId = "p25Next";
+                _NData["p26"].prevPageId = "p25Next";
+            }
             $("#header-progress").show();
             $("#header-title").show();
             $("footer").show();

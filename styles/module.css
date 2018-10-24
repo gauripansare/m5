@@ -396,6 +396,14 @@
         position: absolute;
         width: 370px;
         height: 47px;
+        top: 550px;/*452px;*/
+        left: 285px; 
+    }
+    .mac_taskbar
+    {
+        position: absolute;
+        width: 370px;
+        height: 47px;
         top: 452px;
         left: 285px; 
     }

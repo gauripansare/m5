@@ -1526,6 +1526,47 @@ var _PData = {
           isCorrect: true,
           "score": "2",
           "GroupName": "grp17"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "4.5%",
+          height: "4%",
+          top: "0%",
+          left: "10.4%",
+          widthPX: "37.00694px",
+          heightPX: "36px",
+          topPX: "86.99652862548828px",
+          leftPX: "379.47918701171875px",
+          action: "next",
+          accessText: "File",
+          nextPageId: "p25Next",
+          isCorrect: true,
+          "score": "",
+          "GroupName": "grp21"
+        }
+      ]
+    }
+  },
+  "p25Next": {
+    ImageHotSpots: {
+      "Hotspots": [
+        {
+          HotspotId: 1,
+          HotspotClass: "divHotSpot",
+          width: "23%",
+          height: "3%",
+          top: "7%",
+          left: "12%",
+          widthPX: "57.00694px",
+          heightPX: "34px",
+          topPX: "0px",
+          leftPX: "96.4757080078125px",
+          action: "next",
+          accessText: "File Menu",
+          isCorrect: true,
+          "score": "",
+          "GroupName": "grp18",
         }
       ]
     }
