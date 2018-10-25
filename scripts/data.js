@@ -1556,7 +1556,7 @@ var _PData = {
           HotspotClass: "divHotSpot",
           width: "23%",
           height: "3%",
-          top: "7%",
+          top: "4%",
           left: "12%",
           widthPX: "57.00694px",
           heightPX: "34px",
