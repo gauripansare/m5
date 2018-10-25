@@ -130,6 +130,7 @@ $(document).on('click', ".activityimg", function (event) {
 
 $(document).on('click', ".startbtn", function (event) {
     _Navigator.Next();
+    $(this).k_disable();
 });
 $(document).on('click', ".reviewsubmit", function (event) {
     _Navigator.Next();

@@ -39,7 +39,7 @@ var _ModuleCommon = (function () {
             var pageData = _PData[currentPageData.pageId];
             return pageData;
         },
-        ShowFeedbackReviewMode: function () {
+        ShowFeedbackReviewMode: function (isLoaded) {
             var pageData = this.GetPageDetailData();
             var fdkurl = "";
             if (pageData != undefined) {
@@ -65,7 +65,9 @@ var _ModuleCommon = (function () {
                     $("#div_feedback").css("display", "inline-block");
                     if (fdkurl != undefined) {
                         $("#div_feedback .div_fdkcontent").load(url, function () {
+                            if(isLoaded !== true ){
                             $('html,body').animate({ scrollTop: 0 }, 0, function () { });
+                            }
                         });
                     }
                 }
@@ -114,7 +116,7 @@ var _ModuleCommon = (function () {
                     }
                 }
             }
-            this.ShowFeedbackReviewMode();
+            this.ShowFeedbackReviewMode(true);
             $(".divHotSpot").k_disable();
             $(".divHotSpotDbClick").k_disable();
         },
@@ -181,7 +183,7 @@ var _ModuleCommon = (function () {
 
                 }
             }
-            this.ShowFeedbackReviewMode();
+            this.ShowFeedbackReviewMode(true);
 
 
         },
@@ -215,8 +217,11 @@ var _ModuleCommon = (function () {
                 $(".quizButton").k_enable();
                 $("#linknext").k_enable();
                 var currentPageData = _Navigator.GetCurrentPage();
+                if(currentPageData.isAnswered == undefined || !currentPageData.isAnswered){
+                    this.DNDFeedback();
+                }
                 currentPageData.isAnswered = true;
-                this.DNDFeedback();
+                
 
             } else {
                 $(".quizButton").k_disable();

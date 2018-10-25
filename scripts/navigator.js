@@ -471,22 +471,22 @@ var _Navigator = (function () {
             }
             _currentPageId = pageId;
             _currentPageObject = _NData[_currentPageId]
-            if (_currentPageId == "p15" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
+            if (_currentPageId == "p15" && (_currentPageObject.isVisited == undefined || !_currentPageObject.isVisited)) {
                 progressLevels[0] = (progressLevels[0] + 1);
                 _NData["p14"].nextPageId = "p15";
                 _NData["p16"].prevPageId = "p15";
             }
-            if (_currentPageId == "p32" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
+            if (_currentPageId == "p32" && (_currentPageObject.isVisited == undefined || !_currentPageObject.isVisited)) {
                 progressLevels[0] = (progressLevels[0] + 1);
                 _NData["p31"].nextPageId = "p32";
                 _NData["p33"].prevPageId = "p32";
             }
-            if (_currentPageId == "p41" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
+            if (_currentPageId == "p41" && (_currentPageObject.isVisited == undefined || !_currentPageObject.isVisited)) {
                 progressLevels[0] = (progressLevels[0] + 1);
                 _NData["p40"].nextPageId = "p41";
                 _NData["p42"].prevPageId = "p41";
             }
-            if (_currentPageId == "p25Next" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
+            if (_currentPageId == "p25Next" && (_currentPageObject.isVisited == undefined || !_currentPageObject.isVisited)) {
                 progressLevels[0] = (progressLevels[0] + 1);
                 _NData["p25"].nextPageId = "p25Next";
                 _NData["p26"].prevPageId = "p25Next";
