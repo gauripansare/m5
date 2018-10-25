@@ -1928,10 +1928,10 @@ var _PData = {
         {
           HotspotId: 4,
           HotspotClass: "divHotSpot",
-          width: "4.773869346733668%",
-          height: "6.030150753768844%",
-          top: "92.62981574539364%",
-          left: "74.93718592964824%",
+          width: "6%",
+          height: "7%",
+          top: "90.62981574539364%",
+          left: "79%",
           widthPX: "38px",
           heightPX: "40px",
           topPX: "553px",
@@ -1961,6 +1961,29 @@ var _PData = {
           leftPX: "7.5px",
           action: "next",
           accessText: "System Preferences",
+          isCorrect: true,
+          "score": "",
+          "GroupName": "grp23"
+        }
+      ]
+    }
+  },
+  "p42Next": {
+    ImageHotSpots: {
+      "Hotspots": [
+        {
+          HotspotId: 1,
+          HotspotClass: "divHotSpot",
+          width: "10%",
+          height: "10%",
+          top: "58%",
+          left: "38%",
+          widthPX: "157px",
+          heightPX: "37px",
+          topPX: "42px",
+          leftPX: "7.5px",
+          action: "next",
+          accessText: "Desktop and Screen Saver",
           isCorrect: true,
           "score": "",
           "GroupName": "grp23"

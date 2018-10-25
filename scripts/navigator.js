@@ -3,7 +3,7 @@
 var _Navigator = (function () {
     var _currentPageId = "";
     var _currentPageObject = {};
-    var progressLevels = [46];//ATUL: three pages add, after visit p15,p32,p41
+    var progressLevels = [47];//ATUL: three pages add, after visit p15,p32,p41
     var totalsimscore = 18;
     var presentermode = false;
     var _NData = {
@@ -84,7 +84,7 @@ var _Navigator = (function () {
             dataurl: "p9.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p10": {
             pageId: "p10",
@@ -93,7 +93,7 @@ var _Navigator = (function () {
             dataurl: "p10.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p11": {
             pageId: "p11",
@@ -102,7 +102,7 @@ var _Navigator = (function () {
             dataurl: "p11.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p12": {
             pageId: "p12",
@@ -111,7 +111,7 @@ var _Navigator = (function () {
             dataurl: "p12.htm",
             // hinturl: "",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p13": {
             pageId: "p13",
@@ -121,7 +121,7 @@ var _Navigator = (function () {
             // hinturl: "",
             hasActivity: true,
             isFinish: "level2",
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p14": {
             pageId: "p14",
@@ -221,7 +221,7 @@ var _Navigator = (function () {
             dataurl: "p25.htm",
             hinturl: "hintp25.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop"
+            accessText: "macOS Mojave Desktop"
         },
         "p25Next": {
             pageId: "p25Next",
@@ -230,7 +230,7 @@ var _Navigator = (function () {
             dataurl: "p25Next.htm",
             hinturl: "hintp25Next.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with File menu open"
+            accessText: "macOS Mojave Desktop with File menu open"
         },
         "p26": {
             pageId: "p26",
@@ -239,7 +239,7 @@ var _Navigator = (function () {
             dataurl: "p26.htm",
             hinturl: "hintp26.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop"
+            accessText: "macOS Mojave Desktop"
         },
         "p27": {
             pageId: "p27",
@@ -248,7 +248,7 @@ var _Navigator = (function () {
             dataurl: "p27.htm",
             hinturl: "hintp27.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with File menu open"
+            accessText: "macOS Mojave Desktop with File menu open"
         },
         "p28": {
             pageId: "p28",
@@ -257,7 +257,7 @@ var _Navigator = (function () {
             dataurl: "p28.htm",
             hinturl: "hintp28.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p29": {
             pageId: "p29",
@@ -266,7 +266,7 @@ var _Navigator = (function () {
             dataurl: "p29.htm",
             hinturl: "hintp29.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p30": {
             pageId: "p30",
@@ -275,7 +275,7 @@ var _Navigator = (function () {
             dataurl: "p30.htm",
             hinturl: "hintp30.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p31": {
             pageId: "p31",
@@ -284,7 +284,7 @@ var _Navigator = (function () {
             dataurl: "p31.htm",
             hinturl: "hintp31.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p32": {
             pageId: "p32",
@@ -293,7 +293,7 @@ var _Navigator = (function () {
             dataurl: "p32.htm",
             hinturl: "hintp32.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p33": {
             pageId: "p33",
@@ -366,7 +366,7 @@ var _Navigator = (function () {
             dataurl: "p40.htm",
             hinturl: "hintp40.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop"
+            accessText: "macOS Mojave Desktop"
         },
         "p41": {
             pageId: "p41",
@@ -375,26 +375,35 @@ var _Navigator = (function () {
             dataurl: "p41.htm",
             hinturl: "hintp41.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with Apple menu open"
+            accessText: "macOS Mojave Desktop with Apple menu open"
         },
         "p42": {
             pageId: "p42",
             prevPageId: "p40",
-            nextPageId: "p43",
+            nextPageId: "p42Next",
             dataurl: "p42.htm",
             hinturl: "hintp42.htm",
             hasActivity: true,
-            accessText: "macOS Sierra Desktop with System Preferences Window open"
+            accessText: "macOS Mojave Desktop with System Preferences Window open"
+        },
+        "p42Next": {
+            pageId: "p42Next",
+            prevPageId: "p42",
+            nextPageId: "p43",
+            dataurl: "p42Next.htm",
+            hinturl: "hintp42Next.htm",
+            hasActivity: true,
+            accessText: "macOS Mojave Desktop with System Preferences Window open"
         },
         "p43": {
             pageId: "p43",
-            prevPageId: "p42",
+            prevPageId: "p42Next",
             nextPageId: "p2",
             dataurl: "p43.htm",
             hinturl: "hintp43.htm",
             hasActivity: true,
             isFinish: "level6",
-            accessText: "macOS Sierra Desktop with Desktop and Screen Saver window open"
+            accessText: "macOS Mojave Desktop with Desktop and Screen Saver window open"
         },
         "p44": {
             pageId: "p44",
@@ -414,7 +423,7 @@ var _Navigator = (function () {
             hinturl: "hintp45.htm",
             hasActivity: true,
             isDnd: true,
-            accessText: "macOS Sierra Desktop with Finder Window open"
+            accessText: "macOS Mojave Desktop with Finder Window open"
         },
         "p46": {
             pageId: "p46",
@@ -475,7 +484,7 @@ var _Navigator = (function () {
             if (_currentPageId == "p41" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
                 progressLevels[0] = (progressLevels[0] + 1);
                 _NData["p40"].nextPageId = "p41";
-                _NData["p43"].prevPageId = "p41";
+                _NData["p42"].prevPageId = "p41";
             }
             if (_currentPageId == "p25Next" && (_currentPageObject.isAnswered == undefined || !_currentPageObject.isAnswered)) {
                 progressLevels[0] = (progressLevels[0] + 1);

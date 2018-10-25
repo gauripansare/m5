@@ -12,7 +12,7 @@
     Questions: [
                     {
                         QuestionId: "1",
-                        QuestionText: "How do you open a new Finder window in the macOS Sierra operating system?",
+                        QuestionText: "How do you open a new Finder window in the macOS Mojave operating system?",
                         Options: [
                                      {
                                          "OptionId": "1",
@@ -72,7 +72,7 @@
                     },
                     {
                         QuestionId: "3",
-                        QuestionText: "How do you change the desktop background in the macOS Sierra operating system?",
+                        QuestionText: "How do you change the desktop background in the macOS Mojave operating system?",
                         Options: [
                                      {
                                          "OptionId": "1",
