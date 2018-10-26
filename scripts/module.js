@@ -552,10 +552,11 @@ var _ModuleCommon = (function () {
                 }
             }
             this.AddHotspotClick(_hotspot, event, isCorrect);
-            _Navigator.SetPageScore(score)
+            _Navigator.SetPageScore(score);
+            var isUpdateProgress = true;
             switch (action) {
                 case "next":
-                    _Navigator.SetPageStatus(true);
+                    _Navigator.SetPageStatus(true, isUpdateProgress);
                     this.HotspotNext();
                     break;
                 case "feedback":

@@ -643,7 +643,6 @@ var _Navigator = (function () {
                     $("#Questioninfo").show();
                     showQuestion()
 
-                    //this.UpdateProgressBar();
                     if (gRecordData.Status != "Completed" && !presentermode) {
                         $("#linknext").k_disable();
                         $("#linkprevious").k_disable();
@@ -652,9 +651,7 @@ var _Navigator = (function () {
                 }
 
                 else if (typeof (currentQuestionIndex) != 'undefined' && typeof (gRecordData.Questions) != 'undefined' && (currentQuestionIndex + 1) == gRecordData.Questions.length) {
-                    //this.UpdateProgressBar();
-                    // Show review instruction
-
+                    
                     $(".intro-content-question").hide();
                     $(".questionwrapper").hide();
                     currentQuestionIndex = currentQuestionIndex + 1;
@@ -726,10 +723,12 @@ var _Navigator = (function () {
                 this.UpdateScore();
             }
         },
-        SetPageStatus: function (isAnswered) {
+        SetPageStatus: function (isAnswered, isUpdateProgress) {
             if (isAnswered) {
                 _NData[_currentPageObject.pageId].isAnswered = true;
+                if(isUpdateProgress !== true){
                 this.UpdateProgressBar();
+                }
             }
 
         },
