@@ -28,6 +28,10 @@ var isIpad = userAgentCustom.match(/iPad/i)
 var isIphone = (navigator.userAgent.match(/iPhone/i))
 var isIEEdge = /Edge/.test(navigator.userAgent)
 var Firefox = /Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)
+var animeTime = 1000;
+if(isIphone != null){
+    animeTime = 3000;
+}
 
 var _PData = {
   //windows1
