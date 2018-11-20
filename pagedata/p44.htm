@@ -10,12 +10,15 @@
     <div class="intro-content">
         <div class="activity">
             <div class="wrapperimage">
+                <span class="assertivespan" style="font-size: 0;opacity: 0" aria-live="assertive"></span>
                 <img class="activityimg" src="assets/images/pin1.png" />   
-                <img class="dropimage"  src="assets/images/droppedmspaint.png"/>             
-                <img id="image_merch_1" class="mspaint_image" alt="Microsoft paint shortcut" src="assets/images/msapint-v2-1.png" />                 
-                <div id='droppable' class='windows_taskbar selected_item1'>
+                <img class="dropimage"  src="assets/images/droppedmspaint.png"/> 
+                <div role="button" class="mspaint_image dragdiv"  aria-label="Microsoft paint shortcut" aria-pressed="false" tabindex="0">
+                    <img id="image_merch_1" alt="Microsoft paint shortcut" src="assets/images/msapint-v2-1.png" aria-hidden="true" />   
+                </div>         
+                <div id='droppable' class='windows_taskbar selected_item1 droppable1' tabindex="0" aria-label="Taskbar droppable">
+                        <span style="opacity: 0;font-size: 0;">Taskbar droppable</span>
                  </div>
-                 
             </div>
         </div>
     </div>

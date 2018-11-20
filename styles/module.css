@@ -15,7 +15,7 @@
 .intro-content {
     float: left;
     padding-bottom: 10px;
-    margin: 0 10%;
+    margin: 0 8%;
 }
 
 
@@ -349,10 +349,10 @@
     position: relative;
     }
     .quetiontext{
-       margin-left: 20px;
+       /*margin-left: 20px;*/
    }
    .inpputtext{
-    display: block;
+    display: flex;
     margin: 5px 0;
 }
     #Summary .inpputtext{
@@ -403,7 +403,7 @@
     } 
     .firefox_image{
         position: absolute;
-        top: 268px;
+        top: 265.1px;
         left: 212px; 
     }
     .dock_taskbar{
@@ -648,4 +648,20 @@ input[type="checkbox"].disabled{
     .iscorrect{
         margin-top: 5px;
     }
+}
+.question-band{
+    width: 92%;
+}
+.summaryoptions{
+    width: 88%;
+}
+.Taskbar_img{
+    position: absolute;
+    top: 91%;
+    left: 61%;
+}
+.Dock_img {
+    position: absolute;
+    top: 87%;
+    left: 50%;
 }

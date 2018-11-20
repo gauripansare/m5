@@ -69,7 +69,7 @@ $(document).on("click", "#linknext", function (event) {
     _Navigator.Next();
 });
 $(document).on("click", ".hintdoc", function (event) {
-    debugger;
+    if ($(this).k_IsDisabled()) return;
     if ($(this).hasClass("hintdoc")) {
         if ($(this).hasClass("expanded")) {
             $(this).removeClass("expanded")
@@ -108,7 +108,7 @@ $(document).on("click", ".hintlink", function (event) {
         $(".hintcontainer").slideDown(100, function () {
 
             $(".hintcontainer .hintcontent").find("p:first").attr("tabindex", "-1")
-            if (iOS) {
+            if (isIOS) {
                 $(".hintcontainer .hintcontent").find("p:first").attr("role", "text")
             }
             $(".hintcontainer .hintcontent").find("p:first").focus();
@@ -315,3 +315,75 @@ window.addEventListener("scroll", function () {
 
 }, false);
 
+
+$(document).on("mouseup", ".dragdiv", function (event) {
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (event) {
+        key = event.keyCode;
+    }
+    if (key == 13) {
+        $(this).trigger("click")
+    }
+
+});
+$(document).on("click", ".dragdiv", function (event) {
+
+    if ($(this).attr("disabled") || $(this).hasClass("disabled")) {
+        $(".droppable1").css({
+            "border": "none"
+        });
+        event.preventDefault();
+        return;
+    } else {
+        if ($('.selected').length > 0) {
+            $('.selected').removeClass('selected').css("border", "none");
+        }
+        $(this).css("border", "cornflowerblue solid 2px");
+        $(this).addClass("selected");
+
+        $(this).attr({ "aria-pressed": "true" })
+        // $('.droppable1 ').attr({ "aria-dropeffect": "move" })
+        $(".droppable1").css("border", "cornflowerblue solid 2px");
+    }
+});
+$(document).on("mousedown", ".droppable1", function (event) {
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (event) {
+        key = event.keyCode;
+    }
+    if (key == 13) {
+        $(this).trigger("click")
+    }
+
+});
+
+$(document).on("click touchstart", ".droppable1", function (event) {
+    if ($('.selected').length == 0)
+        return;
+    var pagedata = _Navigator.GetCurrentPage();
+    $('.selected').addClass("dropped");
+    var draggable = $('.selected');
+   
+  //  $(this).addClass("ui-state-highlight")
+  if (isIOS) {
+    $(".assertivespan").attr("role","alert");
+  }
+  if(pagedata.pageId == "p44"){
+    $(".assertivespan").text("Ms Paint pinned to taskbar")
+  }
+  else{
+    $(".assertivespan").text("Ms Paint added to dock")
+  }
+  $(".activityimg,.firefox_image,.mspaint_image,#droppable").hide();
+    $(".dropimage").show();
+    //_ModuleCommon.DNDFeedback();
+    setTimeout(function(){
+        _ModuleCommon.DNDFeedback();
+    },10 )
+    
+});
+$(document).on("click", ".test", function (event) {
+    alert("in");
+});

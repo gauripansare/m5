@@ -78,8 +78,8 @@ var _ModuleCommon = (function () {
                     $("#div_feedback").css("display", "inline-block");
                     if (fdkurl != undefined) {
                         $("#div_feedback .div_fdkcontent").load(url, function () {
-                            if(isLoaded !== true ){
-                            //$('html,body').animate({ scrollTop: 0 }, 0, function () { });
+                            if (isLoaded !== true) {
+                                //$('html,body').animate({ scrollTop: 0 }, 0, function () { });
                             }
                         });
                     }
@@ -105,7 +105,7 @@ var _ModuleCommon = (function () {
                         var posObj = reviewData.Positions[i];
                         var appendImage = $(".wrapperimage");
                         var ht = appendImage.height();
-                        
+
                         while ((posObj.posY + 40) > ht) {
                             posObj.posY = posObj.posY - 2;
                         }
@@ -145,7 +145,8 @@ var _ModuleCommon = (function () {
                         var tEntry = reviewData.textEntry[i].trim().toLowerCase();
                         if (pageDetailData.EmbedSettings.validatearray.indexOf(tEntry) >= 0) {
                             if (reviewData.isCorrect && i == 0) {
-                                $(".textentryreview1").html("<span class='OpenSansFont' style='color:" + ColorCodes.green + ";font-weight:bold;font-size: 13px; '>" + reviewData.textEntry[i] + "</span>")
+                                $(".textentryreview1").html("<span class='OpenSansFont' style='color:" + ColorCodes.green + ";font-weight:bold;font-size: 13px; '>" + reviewData.textEntry[i] + "</span>");
+                                $(".textentryaccessibility").text("Correct folder name " + reviewData.textEntry[i]);
                             }
                             else {
                                 $(".textentryreview2").html("<span class='OpenSansFont'  style='color:" + ColorCodes.green + ";font-weight:bold;font-size: 13px;padding-left:5px; '>" + reviewData.textEntry[i] + "</span>");
@@ -155,6 +156,11 @@ var _ModuleCommon = (function () {
                         else {
                             $(".textentryreview1").html("<span class='OpenSansFont'  style='color:" + ColorCodes.red + ";font-weight:bold;font-size: 13px; '>" + reviewData.textEntry[i] + "</span>")
                         }
+                    }
+                    if (i == 1) {
+
+                        $(".textentryaccessibility").text("Incorrect folder name entered " + reviewData.textEntry[i - 1] + " correct folder name is " + reviewData.textEntry[i]);
+
                     }
 
                 }
@@ -231,11 +237,11 @@ var _ModuleCommon = (function () {
                 $(".quizButton").k_enable();
                 $("#linknext").k_enable();
                 var currentPageData = _Navigator.GetCurrentPage();
-                if(currentPageData.isAnswered == undefined || !currentPageData.isAnswered){
+                if (currentPageData.isAnswered == undefined || !currentPageData.isAnswered) {
                     this.DNDFeedback();
                 }
                 currentPageData.isAnswered = true;
-                
+
 
             } else {
                 $(".quizButton").k_disable();
@@ -246,22 +252,24 @@ var _ModuleCommon = (function () {
         DNDFeedback: function () {
             var pageData = this.GetPageDetailData();
             var fdbkUrl = _Settings.dataRoot + "feedbackdata/" + pageData.DNDSettings.feedbackurl;
+            $(".PSDdraggble").k_disable();
+
+            _Navigator.SetPageStatus(true);
             $("#div_feedback").show();
             $("#div_feedback").css("display", "inline-block");
             $("#div_feedback .div_fdkcontent").load(fdbkUrl, function () {
                 //$('html,body').animate({ scrollTop: document.body.scrollHeight }, 1000, function () { });
+                $("#div_feedback  .div_fdkcontent p:first").attr("tabindex", "-1");
                 if (isIOS) {
-                    $("#div_feedback p:first").attr("role", "text")
+                    $("#div_feedback .div_fdkcontent p:first").attr("role", "text")
                 }
-                $("#div_feedback p:first").attr("tabindex", "-1")
-                window.scrollTo(0, document.body.scrollHeight)
-                $("#div_feedback p:first").focus();
+
+                window.scrollTo(0, document.body.scrollHeight);
+
+                $("#div_feedback .div_fdkcontent p:first").focus();
+
             });
-
-            $(".PSDdraggble").k_disable();
             this.EnableNext();
-            _Navigator.SetPageStatus(true);
-
         },
         DisplayReviewModeForTextEntry: function () {
             $(".EmbededElement").hide();
@@ -303,6 +311,8 @@ var _ModuleCommon = (function () {
         },
         InitiateDNDelements: function () {
             if (_Navigator.IsAnswered()) {
+                $(".activityimg,.firefox_image,.mspaint_image,#droppable").hide();
+                $(".dropimage").show();
                 return;
             }
             $('.dropimage').hide();
@@ -469,7 +479,6 @@ var _ModuleCommon = (function () {
 
         },
         OnPageLoad: function () {
-
             this.LoadHotSpot();
             this.ApplycontainerWidth();
             $("#div_feedback").hide();
@@ -483,6 +492,11 @@ var _ModuleCommon = (function () {
             }
             if (_currentPageObject.pageId == "p2") {
                 _ModuleCommon.ButtonActivity();
+            }
+            if (_Navigator.IsPresenterMode() == true) {
+                $(".startbtn").k_disable();
+                $("#linknext").k_enable();
+                this.PresenterMode();
             }
         },
         LoadHotSpot: function () {
@@ -519,24 +533,48 @@ var _ModuleCommon = (function () {
             }
         },
         PresenterMode: function () {
+            debugger;
             var currentPageData = _Navigator.GetCurrentPage();
             var pageData = this.GetPageDetailData();
-            if (pageData.EmbedSettings != undefined) {
-                $("input[type='text']").addClass("greenspan");
-                $("input[type='text']").val(pageData.EmbedSettings.validatearray[0]);
-                $("input[type='text']").k_disable();
-            }
-            var pageData = this.GetPageDetailData();
-            if (pageData.ImageHotSpots != undefined) {
-                for (var i = 0; i < pageData.ImageHotSpots.Hotspots.length; i++) {
-                    if (pageData.ImageHotSpots.Hotspots[i].isCorrect != undefined && pageData.ImageHotSpots.Hotspots[i].isCorrect) {
-                        $("button[hsid='" + pageData.ImageHotSpots.Hotspots[i].HotspotId + "']").addClass("hotspotclicked");
+            var appendImage = $(".wrapperimage");
+            if (pageData != undefined) {
+                if ((currentPageData.pageId == "p18" || currentPageData.pageId == "p28") && pageData.EmbedSettings != undefined) {
+                    $("input[type='text']").addClass("greenspan");
+                    $("input[type='text']").val(pageData.EmbedSettings.validatearray[0]);
+                    $("input[type='text']").k_disable();
+                    $("input[type='text']").show();
+                    //$(".textentryreview1").html("<span class='OpenSansFont' style='color:" + ColorCodes.green + ";font-weight:bold;font-size: 13px; '>" + reviewData.textEntry[i] + "</span>");
+                }
+                else if (currentPageData.pageId == "p44"){
+                    $(".Taskbar_img").remove();
+                    var _img = "<img src='assets/images/correct-icon.png' alt='correct' class='Taskbar_img' />";
+                    $(".wrapperimage").after().append(_img);
+                }
+                else if (currentPageData.pageId == "p45"){
+                    $(".Dock_img").remove();
+                    var _img = "<img src='assets/images/correct-icon.png' alt='correct' class='Dock_img' />";
+                    $(".wrapperimage").after().append(_img);
+                }
+                else if (pageData.ImageHotSpots != undefined) {
+                    for (var i = 0; i < pageData.ImageHotSpots.Hotspots.length; i++) {
+                        var posObj = "";
+                        var _div = ""
+                        if (pageData.ImageHotSpots.Hotspots[i].isCorrect != undefined && pageData.ImageHotSpots.Hotspots[i].isCorrect) {
+                            posObj = pageData.ImageHotSpots.Hotspots[i];
+                            _div = "<div class='reviewDiv Correct' style='z-index:5;width:39px;height:39px;position:absolute;left:" + posObj.left + ";top:" + posObj.top + ";'><img src='assets/images/review-correct.png' style='width:39px;height:35px;' /></div>";
+                            $(".divHotSpot").addClass("hotspotclicked");
+                            $(".divHotSpot").addClass("disabled");
+                            appendImage.append(_div);
+                        }
                     }
                 }
             }
-            $(".divHotSpot, .divHotSpotdbl").k_disable();
+            //}
             $("#linknext").k_enable();
-            mTreeObj.AppendFooter();
+            if (currentPageData.pageId != "p10") {
+                _Navigator.SetPageStatus(true);
+            }
+            _Navigator.UpdateProgressBar();
         },
         ApplycontainerWidth: function () {
             var innerWidth = $(window).width();

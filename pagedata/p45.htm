@@ -10,14 +10,19 @@
     <div class="intro-content">
         <div class="activity">
             <div class="wrapperimage">
+                <span class="assertivespan" style="font-size: 0;opacity: 0" aria-live="assertive"></span>
                 <img class="activityimg" src="assets/images/m5-s4-p1.jpg" />
-                <img class="dropimage"  src="assets/images/m5-s4-p2.jpg"/>
-                <img id="image_merch_1" class="firefox_image" alt="firefox" src="assets/images/fireFox-icon-1.png" />                 
-                <div id='droppable' class='mac_taskbar selected_item1'>
-                 </div>                              
-                 
+                <img class="dropimage" src="assets/images/m5-s4-p2.jpg" />
+                <div class="firefox_image dragdiv" role="button" aria-label="firefox icon" aria-pressed="false" tabindex="0" >
+                    <img id="image_merch_1" alt="firefox" src="assets/images/fireFox-icon-1.png" aria-hidden="true"  />
+                </div>
+                <div id='droppable' class='mac_taskbar selected_item1 droppable1' aria-label="Dock droppable" tabindex="0">
+                    <span style="opacity: 0;font-size: 0">Dock droppable</span>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div id="div_feedback"><div class="div_fdkcontent"></div></div>
+<div id="div_feedback">
+    <div class="div_fdkcontent"></div>
+</div>
