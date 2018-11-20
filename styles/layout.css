@@ -77,7 +77,7 @@ div, p, span, input {
         min-width: 100px;
     }
 
-    .mspaint_image:focus, .ui-droppable:focus, a:focus, input:focus, button:focus, textarea:focus, select:focus, .mspaint_image:active, .ui-droppable:active, a:active, input:active,     button:active, textarea:active, select:active,    .questioninnerwrapper input[type="radio"]:focus + .inputcircle::after,
+    .modulebtn:focus, .mspaint_image:focus, .ui-droppable:focus, a:focus, input:focus, button:focus, textarea:focus, select:focus, .mspaint_image:active, .ui-droppable:active, a:active, input:active,     button:active, textarea:active, select:active,    .questioninnerwrapper input[type="radio"]:focus + .inputcircle::after,
     #Summary input[type="radio"]:focus + .inputcircle::after {
     outline: #ff8c00 auto 4px;
     }

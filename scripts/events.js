@@ -249,6 +249,40 @@ $(document).on("click", ".assessmentSubmit", function (event) {
 $(document).on('click', "#continuebtn", function (event) {
     _ModuleCommon.OnContinue();
 });
+$(document).on("keydown", ".buttonlink", function (event) {
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (event) {
+        key = event.keyCode;
+    }
+    if (key == 13) {
+        var buttonlink = [
+            { btnId: "button1", nextPageId: "p3", imageId: "tick1", lastpageId: ["p8"] },
+            { btnId: "button2", nextPageId: "p14", imageId: "tick2", lastpageId: ["p23"] },
+            { btnId: "button3", nextPageId: "p33", imageId: "tick3", lastpageId: ["p39"] },
+            { btnId: "button4", nextPageId: "p44", imageId: "tick4", lastpageId: ["p44"] },
+            { btnId: "button5", nextPageId: "p9", imageId: "tick5", lastpageId: ["p13"] },
+            { btnId: "button6", nextPageId: "p25", imageId: "tick6", lastpageId: ["p31", "p32"] },
+            { btnId: "button7", nextPageId: "p40", imageId: "tick7", lastpageId: ["p43"] },
+            { btnId: "button8", nextPageId: "p45", imageId: "tick8", lastpageId: ["p45"] },
+        ]
+        var btnId = $(this).attr("id");
+        var nextPageId = "";
+        if (btnId != undefined) {
+            for (var i = 0; i < buttonlink.length; i++) {
+                if (buttonlink[i].btnId == btnId) {
+                    nextPageId = buttonlink[i].nextPageId;
+    
+                    break;
+                }
+            }
+            if (nextPageId != "" && nextPageId != undefined) {
+                // _Navigator.Next(); 
+                _Navigator.LoadPage(nextPageId);
+            }
+        }
+    }
+});
 $(document).on('click', ".buttonlink", function (event) {
     var buttonlink = [
         { btnId: "button1", nextPageId: "p3", imageId: "tick1", lastpageId: ["p8"] },
