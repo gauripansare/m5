@@ -412,7 +412,6 @@ header{
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
     padding:5px 0 10px 0;
-    margin-bottom:25px;
 }
 .header-content-dock{
     visibility: hidden ;

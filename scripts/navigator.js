@@ -486,7 +486,7 @@ var _Navigator = (function () {
         },
         
         LoadPage: function (pageId, jsonObj) {
-            console.log(pageId)
+
             if (jsonObj == undefined) {
                 jsonObj = {};
             }
@@ -572,23 +572,20 @@ var _Navigator = (function () {
                                 if (_currentPageObject.pageId == "p2") {
                                     $("#titleheader").focus();
                                 }
+                                else if ((isIphone || isAndroid) && _NData[_currentPageId].isLoaded != undefined && _NData[_currentPageId].isLoaded == true) {//iphone android on previous focus is set to header
+                                    $("h2").attr("tabindex", "0");
+                                    $("h2").focus();
+                                }
                                 else {
-                                    if (_currentPageId != quizpageid) {
-                                        if(isChrome || Firefox){
-                                            $("h2.pageheading").attr("tabindex","-1");
-                                            $("h2.pageheading").focus();
-                                        }
-                                        else
-                                        {
-                                            $("#progressdiv").focus();
-                                        }
-                                        
+                                    if (isChrome && !isAndroid) {
+                                        $("h2").attr("tabindex", "0");
+                                        $("h2").focus();
                                     }
                                     else {
-                                        $("#Questioninfo").focus();
+                                        $("#progressdiv").focus();
                                     }
                                 }
-                            });
+                                _NData[_currentPageId].isLoaded = true;                            });
                         }
                         else {
                             OnPageLoad();
@@ -603,6 +600,8 @@ var _Navigator = (function () {
                         if (_currentPageId == quizpageid)//  change to assessment id
                         {
                             _Assessment.ShowQuestion();
+                            $("h2.pageheading").attr("tabindex", "0");
+                            $("h2").focus();
                         }
 
                         $("#hintdiv").show();

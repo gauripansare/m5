@@ -165,6 +165,8 @@ var _ModuleCommon = (function () {
 
                 }
                 $(".textentryreview1").show();
+                $(".textentryreview1").attr("aria-hidden","true");                
+                $(".textentryreview2").attr("aria-hidden","true");
             }
         },
         DisplayUserReviewMode: function () {
