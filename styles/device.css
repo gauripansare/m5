@@ -115,6 +115,10 @@
     .header-content-dock .hintlinkspan{
         vertical-align: super;
     }
+    .activity{
+        height: 350px;
+        overflow-y: scroll;
+        }
 }
 
 @media screen and (max-width : 480px) {
@@ -152,6 +156,10 @@
     .question-band{
         margin-left: 15%;
     }
+    .activity{
+        height: 350px;
+        overflow-y: scroll;
+        }
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media screen and (max-width : 770px) {
