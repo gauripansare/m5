@@ -322,8 +322,7 @@
     #summaryheading{
         border-top: 1px solid #cdcdcd;
         border-bottom: 1px solid #cdcdcd;
-        margin-left: -20px;
-        margin-right: 0;
+        margin:0;
         padding-top: 5px;
         padding-bottom: 5px;
     }
@@ -667,6 +666,14 @@ input[type="checkbox"].disabled{
     position: absolute;
     top: 87%;
     left: 50%;
+}
+.retry_div{
+    margin-left: 35%;
+}
+.main_score_div{
+    display: flex;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 10px;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

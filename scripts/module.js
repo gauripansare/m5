@@ -209,6 +209,9 @@ var _ModuleCommon = (function () {
 
 
         },
+        GetReviewData: function () {
+            return reviewData;
+        },
         ButtonActivity: function () {
 
             $(".quizButton").k_disable();
@@ -638,6 +641,7 @@ var _ModuleCommon = (function () {
                 default:
                     break;
             }
+            _Navigator.GetBookmarkData();
         },
         SetFeedbackTop: function () {
             var ptop = Number($("#div_feedback").position().top);
@@ -959,6 +963,7 @@ $.knowdlCountDown = function (options) {
 }
 
 $(document).ready(function () {
-    _Navigator.Start();
+
+    _Navigator.Initialize();
     $('body').attr({ "id": "thebody", "onmousedown": "document.getElementById('thebody').classList.add('no-focus');", "onkeydown": "document.getElementById('thebody').classList.remove('no-focus');" })
 });

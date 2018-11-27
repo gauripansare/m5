@@ -316,11 +316,11 @@ $(document).on('click', ".inputcircle", function (event) {
 });
 
 window.onload = function () {
-    //_ScormUtility.Init();
+    _ScormUtility.Init();
 }
 
 window.onunload = function () {
-    //_ScormUtility.End();
+    _ScormUtility.End();
 }
 
 window.addEventListener("scroll", function () {
@@ -412,12 +412,15 @@ $(document).on("click touchstart", ".droppable1", function (event) {
   }
   $(".activityimg,.firefox_image,.mspaint_image,#droppable").hide();
     $(".dropimage").show();
-    //_ModuleCommon.DNDFeedback();
     setTimeout(function(){
         _ModuleCommon.DNDFeedback();
     },10 )
     
 });
-$(document).on("click", ".test", function (event) {
-    alert("in");
+$(document).on('click', ".retry_modulebtn", function (event) {
+    if ($(this).k_IsDisabled()) return;
+    _Navigator.SetBookMarkRetrycnt();    
+    _Navigator.GetBookmarkData();
+    location.reload();
+    $(this).k_disable();
 });

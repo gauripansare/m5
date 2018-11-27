@@ -1,19 +1,20 @@
 ﻿//This api will contain navigation logic and page load.
 //It will also handle the question navigation if the page is having multiple questions.
 var _Navigator = (function () {
-    var packageType = "";//presenter/scorm/revel
+    var packageType = "scorm";//presenter/scorm/revel
     var _currentPageId = "";
     var _currentPageObject = {};
     var progressLevels = [47];//ATUL: three pages add, after visit p15,p32,p41
     var totalsimscore = 18;
     //var presentermode = false;
     var bookmarkpageid = "";
+    var retrycnt = 1;
     var quizpageid = "p46";
     var _NData = {
         "p1": {
             pageId: "p1",
             prevPageId: "",
-            nextPageId: "p2",
+            nextPageId: "p46",
             dataurl: "p1.htm",
             isStartPage: true,
             isAnswered: true,
@@ -486,7 +487,12 @@ var _Navigator = (function () {
         },
         
         LoadPage: function (pageId, jsonObj) {
-
+            $(".hintcontainer").hide();
+             $(".header-content-dock").css({"visibility":"hidden"});
+            if (_Navigator.IsRevel() && _currentPageId != undefined && _currentPageId != "") {
+                LifeCycleEvents.OnUnloadFromPlayer()
+            }
+            bookmarkpageid = pageId;
             if (jsonObj == undefined) {
                 jsonObj = {};
             }
@@ -639,7 +645,8 @@ var _Navigator = (function () {
                         if (_currentPageObject.pageId == "p18" || _currentPageObject.pageId == "p28") {
                             $('input[type=text]').focus();
                         }
-
+                        debugger;
+                        _Navigator.GetBookmarkData();
                     });
                 })
             }
@@ -810,7 +817,7 @@ var _Navigator = (function () {
             return submitCounter;
         },
         SetPresenterMode: function (val) {
-            presentermode = val;
+            packageType = val;
         },
         IsPresenterMode: function () {
             if (packageType == "presenter") {
@@ -825,6 +832,7 @@ var _Navigator = (function () {
                 return;
             var bookmarkobj = {}
             bookmarkobj.BMPageId = bookmarkpageid;
+            bookmarkobj.BMretrycnt = retrycnt;
             bookmarkobj.VisistedPages = this.GetNavigatorBMData();
             bookmarkobj.ProgressLevels = progressLevels;
             bookmarkobj.ReviewData = _ModuleCommon.GetReviewData();
@@ -880,14 +888,21 @@ var _Navigator = (function () {
             if (bookmarkdata != undefined && bookmarkdata != "") {
                 bookmarkdata = JSON.parse(bookmarkdata);
                 bookmarkpageid = bookmarkdata.BMPageId;
+                retrycnt = bookmarkdata.BMretrycnt;
                 this.SetNavigatorBMData(bookmarkdata.VisistedPages)
-                //progressLevels = bookmarkdata.ProgressLevels;
+                progressLevels = bookmarkdata.ProgressLevels;
                 _ModuleCommon.SetReviewData(bookmarkdata.ReviewData)
                 _Assessment.Setbookmarkdata(bookmarkdata.AssessmentData)
             }
         },
         GetBookMarkPage: function () {
             return bookmarkpageid;
+        },
+        GetBookMarkRetrycnt: function(){
+            return retrycnt;
+        },
+        SetBookMarkRetrycnt: function(){
+            retrycnt = retrycnt + 1;
         },
         Initialize: function () {
 
