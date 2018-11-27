@@ -300,7 +300,6 @@ var _ModuleCommon = (function () {
 
         },
         OnContinue: function () {
-
             $('.divHotSpot').removeClass('hotspotclicked').k_enable()
             $(".divHotSpot").k_enable();
 
@@ -308,9 +307,9 @@ var _ModuleCommon = (function () {
             $("#div_feedback").hide();
             //$('html,body').animate({ scrollTop: document.body.scrollHeigh }, 500, function () { });
             if (isIOS) {
-                $(".pageheading").attr("role", "text")
+                //$(".pageheading").attr("role", "text");
             }
-            $(".pageheading").attr("tabindex", "-1")
+            $(".pageheading").attr("tabindex", "-1");
             window.scrollTo(0, document.body.scrollHeight)
             $(".pageheading").focus();
         },
