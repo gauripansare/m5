@@ -47,26 +47,9 @@ var _PData = {
   "p3": {
     ImageHotSpots: {
       "Hotspots": [
+        
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "81.77215189873418%",
-          height: "83.47386172006746%",
-          top: "7.251264755480608%",
-          left: "11.58227848101266%",
-          widthPX: "651px",
-          heightPX: "503px",
-          topPX: "43.28125px",
-          leftPX: "92.1875px",
-          action: "feedback",
-          isCorrect: false,
-          feedbackurl: "feedbackip3.htm",
-          accessText: "File Explorer Window",
-          "score": "",
-          "GroupName": "grp1"
-        },
-        {
-          HotspotId: 2,
           HotspotClass: "divHotSpot",
           width: "23.544303797468356%",
           height: "5.227655986509275%",
@@ -82,6 +65,24 @@ var _PData = {
           accessText: "Taskbar",
           "score": "2",
           "GroupName": "grp1",
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "81.77215189873418%",
+          height: "83.47386172006746%",
+          top: "7.251264755480608%",
+          left: "11.58227848101266%",
+          widthPX: "651px",
+          heightPX: "503px",
+          topPX: "43.28125px",
+          leftPX: "92.1875px",
+          action: "feedback",
+          isCorrect: false,
+          feedbackurl: "feedbackip3.htm",
+          accessText: "File Explorer Window",
+          "score": "",
+          "GroupName": "grp1"
         },
         {
           HotspotId: 3,
@@ -101,26 +102,9 @@ var _PData = {
           "score": "",
           "GroupName": "grp1"
         },
+        
         {
           HotspotId: 4,
-          HotspotClass: "divHotSpot",
-          width: "22.911392405063292%",
-          height: "6.070826306913997%",
-          top: "93.929173693086%",
-          left: "36.0126582278481%",
-          widthPX: "182px",
-          heightPX: "40px",
-          topPX: "560.75px",
-          leftPX: "286.65625px",
-          action: "feedback",
-          isCorrect: false,
-          feedbackurl: "feedbackip3.htm",
-          accessText: "Taskbar Icons",
-          "score": "",
-          "GroupName": "grp1"
-        },
-        {
-          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "4.050632911392405%",
           height: "5.396290050590219%",
@@ -138,7 +122,7 @@ var _PData = {
           "GroupName": "grp1"
         },
         {
-          HotspotId: 6,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "6.20253164556962%",
           height: "9.949409780775717%",
@@ -154,35 +138,33 @@ var _PData = {
           accessText: "Chrome Application Shortcut",
           "score": "",
           "GroupName": "grp1"
-        }
+        },
+        {
+          HotspotId: 6,
+          HotspotClass: "divHotSpot",
+          width: "22.911392405063292%",
+          height: "6.070826306913997%",
+          top: "93.929173693086%",
+          left: "36.0126582278481%",
+          widthPX: "182px",
+          heightPX: "40px",
+          topPX: "560.75px",
+          leftPX: "286.65625px",
+          action: "feedback",
+          isCorrect: false,
+          feedbackurl: "feedbackip3.htm",
+          accessText: "Taskbar Icons",
+          "score": "",
+          "GroupName": "grp1"
+        },
       ]
     },
   },
   "p4": {
     ImageHotSpots: {
-      "Hotspots": [
-
+      "Hotspots": [        
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "81.77215189873418%",
-          height: "83.47386172006746%",
-          top: "7.251264755480608%",
-          left: "11.58227848101266%",
-          widthPX: "651px",
-          heightPX: "503px",
-          topPX: "43.28125px",
-          leftPX: "92.1875px",
-          action: "feedback",
-          feedbackurl: "feedbackcp4.htm",
-          accessText: "File Explorer Window",
-          isCorrect: true,
-          "score": "2",
-          "GroupName": "grp2",
-          "ActionName": "hotspot"
-        },
-        {
-          HotspotId: 2,
           HotspotClass: "divHotSpot",
           width: "23.492462311557787%",
           height: "6.867671691792294%",
@@ -198,6 +180,25 @@ var _PData = {
           isCorrect: false,
           "score": "",
           "GroupName": "grp11",
+          "ActionName": "hotspot"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "81.77215189873418%",
+          height: "83.47386172006746%",
+          top: "7.251264755480608%",
+          left: "11.58227848101266%",
+          widthPX: "651px",
+          heightPX: "503px",
+          topPX: "43.28125px",
+          leftPX: "92.1875px",
+          action: "feedback",
+          feedbackurl: "feedbackcp4.htm",
+          accessText: "File Explorer Window",
+          isCorrect: true,
+          "score": "2",
+          "GroupName": "grp2",
           "ActionName": "hotspot"
         },
         {
@@ -218,26 +219,9 @@ var _PData = {
           "score": "",
           "GroupName": "grp11"
         },
+        
         {
           HotspotId: 4,
-          HotspotClass: "divHotSpot",
-          width: "22.8643216080402%",
-          height: "7.202680067001675%",
-          top: "92%",
-          left: "36.38894472361809%",
-          widthPX: "182px",
-          heightPX: "43px",
-          topPX: "554.75px",
-          leftPX: "289.65625px",
-          action: "feedback",
-          feedbackurl: "feedbackip4.htm",
-          accessText: "Taskbar Icons",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp11"
-        },
-        {
-          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "4.050632911392405%",
           height: "5.396290050590219%",
@@ -255,7 +239,7 @@ var _PData = {
           "GroupName": "grp11"
         },
         {
-          HotspotId: 6,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "6.20253164556962%",
           height: "9.949409780775717%",
@@ -271,7 +255,25 @@ var _PData = {
           isCorrect: false,
           "score": "",
           "GroupName": "grp11"
-        }
+        },
+        {
+          HotspotId: 6,
+          HotspotClass: "divHotSpot",
+          width: "22.8643216080402%",
+          height: "7.202680067001675%",
+          top: "92%",
+          left: "36.38894472361809%",
+          widthPX: "182px",
+          heightPX: "43px",
+          topPX: "554.75px",
+          leftPX: "289.65625px",
+          action: "feedback",
+          feedbackurl: "feedbackip4.htm",
+          accessText: "Taskbar Icons",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp11"
+        },
 
       ]
     }
@@ -279,27 +281,9 @@ var _PData = {
   "p5": {
     ImageHotSpots: {
       "Hotspots": [
+        
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "81.77215189873418%",
-          height: "83.47386172006746%",
-          top: "7.251264755480608%",
-          left: "11.58227848101266%",
-          widthPX: "651px",
-          heightPX: "503px",
-          topPX: "43.28125px",
-          leftPX: "92.1875px",
-          action: "feedback",
-          feedbackurl: "feedbackip5.htm",
-          accessText: "File Explorer Window",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp12",
-          "ActionName": "hotspot1"
-        },
-        {
-          HotspotId: 2,
           HotspotClass: "divHotSpot",
           width: "23.544303797468356%",
           height: "5.227655986509275%",
@@ -316,6 +300,25 @@ var _PData = {
           "score": "",
           "GroupName": "grp12",
           "ActionName": "hotspot"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "81.77215189873418%",
+          height: "83.47386172006746%",
+          top: "7.251264755480608%",
+          left: "11.58227848101266%",
+          widthPX: "651px",
+          heightPX: "503px",
+          topPX: "43.28125px",
+          leftPX: "92.1875px",
+          action: "feedback",
+          feedbackurl: "feedbackip5.htm",
+          accessText: "File Explorer Window",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp12",
+          "ActionName": "hotspot1"
         },
         {
           HotspotId: 3,
@@ -336,26 +339,9 @@ var _PData = {
           "GroupName": "grp3",
           "ActionName": "hotspot"
         },
+        
         {
           HotspotId: 4,
-          HotspotClass: "divHotSpot",
-          width: "22.911392405063292%",
-          height: "6.070826306913997%",
-          top: "93.929173693086%",
-          left: "36.0126582278481%",
-          widthPX: "182px",
-          heightPX: "40px",
-          topPX: "560.75px",
-          leftPX: "286.65625px",
-          action: "feedback",
-          feedbackurl: "feedbackip5.htm",
-          accessText: "Taskbar Icons",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp12"
-        },
-        {
-          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "4.050632911392405%",
           height: "5.396290050590219%",
@@ -373,7 +359,7 @@ var _PData = {
           "GroupName": "grp12"
         },
         {
-          HotspotId: 6,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "6.20253164556962%",
           height: "9.949409780775717%",
@@ -389,34 +375,34 @@ var _PData = {
           accessText: "Chrome Application Shortcut",
           "score": "",
           "GroupName": "grp12"
-        }
+        },
+        {
+          HotspotId: 6,
+          HotspotClass: "divHotSpot",
+          width: "22.911392405063292%",
+          height: "6.070826306913997%",
+          top: "93.929173693086%",
+          left: "36.0126582278481%",
+          widthPX: "182px",
+          heightPX: "40px",
+          topPX: "560.75px",
+          leftPX: "286.65625px",
+          action: "feedback",
+          feedbackurl: "feedbackip5.htm",
+          accessText: "Taskbar Icons",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp12"
+        },
       ]
     }
   },
   "p6": {
     ImageHotSpots: {
       "Hotspots": [
+        
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "81.77215189873418%",
-          height: "83.47386172006746%",
-          top: "7.251264755480608%",
-          left: "11.58227848101266%",
-          widthPX: "651px",
-          heightPX: "503px",
-          topPX: "43.28125px",
-          leftPX: "92.1875px",
-          accessText: "File Explorer Window",
-          action: "feedback",
-          feedbackurl: "feedbackip6.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp13",
-          "ActionName": "hotspot1"
-        },
-        {
-          HotspotId: 2,
           HotspotClass: "divHotSpot",
           width: "23.544303797468356%",
           height: "5.227655986509275%",
@@ -433,6 +419,25 @@ var _PData = {
           "score": "",
           "GroupName": "grp13",
           "ActionName": "hotspot"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "81.77215189873418%",
+          height: "83.47386172006746%",
+          top: "7.251264755480608%",
+          left: "11.58227848101266%",
+          widthPX: "651px",
+          heightPX: "503px",
+          topPX: "43.28125px",
+          leftPX: "92.1875px",
+          accessText: "File Explorer Window",
+          action: "feedback",
+          feedbackurl: "feedbackip6.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp13",
+          "ActionName": "hotspot1"
         },
         {
           HotspotId: 3,
@@ -453,27 +458,9 @@ var _PData = {
           "GroupName": "grp13",
           "ActionName": "hotspot2"
         },
+       
         {
           HotspotId: 4,
-          HotspotClass: "divHotSpot",
-          width: "22.911392405063292%",
-          height: "6.070826306913997%",
-          top: "93.929173693086%",
-          left: "36.0126582278481%",
-          widthPX: "182px",
-          heightPX: "40px",
-          topPX: "560.75px",
-          leftPX: "286.65625px",
-          accessText: "Taskbar Icons",
-          action: "feedback",
-          feedbackurl: "feedbackip6.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp13",
-          "ActionName": "hotspot3"
-        },
-        {
-          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "4.050632911392405%",
           height: "5.396290050590219%",
@@ -491,7 +478,7 @@ var _PData = {
           "GroupName": "grp13"
         },
         {
-          HotspotId: 6,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "6.20253164556962%",
           height: "9.949409780775717%",
@@ -508,34 +495,36 @@ var _PData = {
           "score": "2",
           "ActionName": "hotspot",
           "GroupName": "grp4"
-        }
+        },
+        {
+          HotspotId: 6,
+          HotspotClass: "divHotSpot",
+          width: "22.911392405063292%",
+          height: "6.070826306913997%",
+          top: "93.929173693086%",
+          left: "36.0126582278481%",
+          widthPX: "182px",
+          heightPX: "40px",
+          topPX: "560.75px",
+          leftPX: "286.65625px",
+          accessText: "Taskbar Icons",
+          action: "feedback",
+          feedbackurl: "feedbackip6.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp13",
+          "ActionName": "hotspot3"
+        },
+
       ]
     }
   },
   "p7": {
     ImageHotSpots: {
       "Hotspots": [
+        
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "81.77215189873418%",
-          height: "83.47386172006746%",
-          top: "7.251264755480608%",
-          left: "11.58227848101266%",
-          widthPX: "651px",
-          heightPX: "503px",
-          topPX: "43.28125px",
-          leftPX: "92.1875px",
-          accessText: "File Explorer Window",
-          action: "feedback",
-          feedbackurl: "feedbackip7.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp14",
-          "ActionName": "hotspot1"
-        },
-        {
-          HotspotId: 2,
           HotspotClass: "divHotSpot",
           width: "23.544303797468356%",
           height: "5.227655986509275%",
@@ -552,6 +541,25 @@ var _PData = {
           "score": "",
           "GroupName": "grp14",
           "ActionName": "hotspot"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "81.77215189873418%",
+          height: "83.47386172006746%",
+          top: "7.251264755480608%",
+          left: "11.58227848101266%",
+          widthPX: "651px",
+          heightPX: "503px",
+          topPX: "43.28125px",
+          leftPX: "92.1875px",
+          accessText: "File Explorer Window",
+          action: "feedback",
+          feedbackurl: "feedbackip7.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp14",
+          "ActionName": "hotspot1"
         },
         {
           HotspotId: 3,
@@ -572,27 +580,9 @@ var _PData = {
           "GroupName": "grp14",
           "ActionName": "hotspot2"
         },
+        
         {
           HotspotId: 4,
-          HotspotClass: "divHotSpot",
-          width: "22.911392405063292%",
-          height: "6.070826306913997%",
-          top: "93.929173693086%",
-          left: "36.0126582278481%",
-          widthPX: "182px",
-          heightPX: "40px",
-          topPX: "560.75px",
-          leftPX: "286.65625px",
-          accessText: "Taskbar Icons",
-          action: "feedback",
-          feedbackurl: "feedbackip7.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp14",
-          "ActionName": "hotspot3"
-        },
-        {
-          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "4.773869346733668%",
           height: "6.867671691792294%",
@@ -611,7 +601,7 @@ var _PData = {
           "ActionName": "hotspot"
         },
         {
-          HotspotId: 6,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "6.20253164556962%",
           height: "9.949409780775717%",
@@ -628,34 +618,35 @@ var _PData = {
           "score": "",
           "ActionName": "hotspot3",
           "GroupName": "grp14"
-        }
+        },
+        {
+          HotspotId: 6,
+          HotspotClass: "divHotSpot",
+          width: "22.911392405063292%",
+          height: "6.070826306913997%",
+          top: "93.929173693086%",
+          left: "36.0126582278481%",
+          widthPX: "182px",
+          heightPX: "40px",
+          topPX: "560.75px",
+          leftPX: "286.65625px",
+          accessText: "Taskbar Icons",
+          action: "feedback",
+          feedbackurl: "feedbackip7.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp14",
+          "ActionName": "hotspot3"
+        },
       ]
     }
   },
   "p8": {
     ImageHotSpots: {
       "Hotspots": [
+        
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "81.77215189873418%",
-          height: "83.47386172006746%",
-          top: "7.251264755480608%",
-          left: "11.58227848101266%",
-          widthPX: "651px",
-          heightPX: "503px",
-          topPX: "43.28125px",
-          leftPX: "92.1875px",
-          accessText: "Taskbar",
-          action: "feedback",
-          feedbackurl: "feedbackip8.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp6",
-          "ActionName": "hotspot1"
-        },
-        {
-          HotspotId: 2,
           HotspotClass: "divHotSpot",
           width: "23.544303797468356%",
           height: "5.227655986509275%",
@@ -672,6 +663,25 @@ var _PData = {
           "score": "",
           "GroupName": "grp6",
           "ActionName": "hotspot2"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "81.77215189873418%",
+          height: "83.47386172006746%",
+          top: "7.251264755480608%",
+          left: "11.58227848101266%",
+          widthPX: "651px",
+          heightPX: "503px",
+          topPX: "43.28125px",
+          leftPX: "92.1875px",
+          accessText: "Taskbar",
+          action: "feedback",
+          feedbackurl: "feedbackip8.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp6",
+          "ActionName": "hotspot1"
         },
         {
           HotspotId: 3,
@@ -692,27 +702,9 @@ var _PData = {
           "GroupName": "grp6",
           "ActionName": "hotspot3"
         },
+        
         {
           HotspotId: 4,
-          HotspotClass: "divHotSpot",
-          width: "22.911392405063292%",
-          height: "6.070826306913997%",
-          top: "92.929173693086%",
-          left: "36.0126582278481%",
-          widthPX: "182px",
-          heightPX: "40px",
-          topPX: "560.75px",
-          leftPX: "286.65625px",
-          accessText: "Taskbar Icons",
-          action: "feedback",
-          feedbackurl: "feedbackcp8.htm",
-          isCorrect: true,
-          "score": "2",
-          "GroupName": "grp6",
-          "ActionName": "hotspot4"
-        },
-        {
-          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "4.050632911392405%",
           height: "5.396290050590219%",
@@ -731,7 +723,7 @@ var _PData = {
           "ActionName": "hotspot5"
         },
         {
-          HotspotId: 6,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "6.20253164556962%",
           height: "9.949409780775717%",
@@ -748,7 +740,26 @@ var _PData = {
           "score": "",
           "ActionName": "hotspot6",
           "GroupName": "grp6"
-        }
+        },
+        {
+          HotspotId: 6,
+          HotspotClass: "divHotSpot",
+          width: "22.911392405063292%",
+          height: "6.070826306913997%",
+          top: "92.929173693086%",
+          left: "36.0126582278481%",
+          widthPX: "182px",
+          heightPX: "40px",
+          topPX: "560.75px",
+          leftPX: "286.65625px",
+          accessText: "Taskbar Icons",
+          action: "feedback",
+          feedbackurl: "feedbackcp8.htm",
+          isCorrect: true,
+          "score": "2",
+          "GroupName": "grp6",
+          "ActionName": "hotspot4"
+        },
       ]
     }
   },
@@ -758,42 +769,6 @@ var _PData = {
       "Hotspots": [
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "74.5%",
-          height: "80%",
-          top: "8%",
-          left: "12%",
-          widthPX: "633px",
-          heightPX: "447px",
-          topPX: "64px",
-          leftPX: "79.5px",
-          accessText: "Finder Window",
-          action: "feedback",
-          feedbackurl: "feedbackip9.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp2"
-        },
-        {
-          HotspotId: 2,
-          HotspotClass: "divHotSpot",
-          width: "10.301507537688442%",
-          height: "7.537688442211055%",
-          top: "90%",
-          left: "85.61557788944724%",
-          widthPX: "82px",
-          heightPX: "49px",
-          topPX: "545.984375px",
-          leftPX: "681.5px",
-          accessText: "Recycle bin",
-          action: "feedback",
-          feedbackurl: "feedbackip9.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp2"
-        },
-        {
-          HotspotId: 3,
           HotspotClass: "divHotSpot",
           width: "81.65829145728644%",
           height: "7.537688442211055%",
@@ -812,7 +787,26 @@ var _PData = {
           "ActionName": "hotspot"
         },
         {
-          HotspotId: 4,
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "74.5%",
+          height: "80%",
+          top: "8%",
+          left: "12%",
+          widthPX: "633px",
+          heightPX: "447px",
+          topPX: "64px",
+          leftPX: "79.5px",
+          accessText: "Finder Window",
+          action: "feedback",
+          feedbackurl: "feedbackip9.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp2"
+        },
+                
+        {
+          HotspotId: 3,
           HotspotClass: "divHotSpot",
           width: "3.391959798994975%",
           height: "3.6850921273031827%",
@@ -830,7 +824,7 @@ var _PData = {
           "GroupName": "grp2"
         },
         {
-          HotspotId: 5,
+          HotspotId: 4,
           HotspotClass: "divHotSpot",
           width: "36.18090452261307%",
           height: "3.350083752093802%",
@@ -846,7 +840,25 @@ var _PData = {
           isCorrect: false,
           "score": "",
           "GroupName": "grp2"
-        }
+        },
+        {
+          HotspotId: 5,
+          HotspotClass: "divHotSpot",
+          width: "10.301507537688442%",
+          height: "7.537688442211055%",
+          top: "90%",
+          left: "85.61557788944724%",
+          widthPX: "82px",
+          heightPX: "49px",
+          topPX: "545.984375px",
+          leftPX: "681.5px",
+          accessText: "Recycle bin",
+          action: "feedback",
+          feedbackurl: "feedbackip9.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp2"
+        },
       ]
     }
   },
@@ -855,43 +867,6 @@ var _PData = {
       "Hotspots": [
         {
           HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "74.5%",
-          height: "80%",
-          top: "8%",
-          left: "12%",
-          widthPX: "633px",
-          heightPX: "447px",
-          topPX: "64px",
-          leftPX: "79.5px",
-          accessText: "Finder Window",
-          action: "feedback",
-          feedbackurl: "feedbackcp10.htm",
-          isCorrect: true,
-          "score": "2",
-          "GroupName": "grp8",
-          "ActionName": "hotspot"
-        },
-        {
-          HotspotId: 2,
-          HotspotClass: "divHotSpot",
-          width: "10.804020100502512%",
-          height: "7.050251256281408%",
-          top: "90%",
-          left: "85.48994974874373%",
-          widthPX: "86px",
-          heightPX: "64px",
-          topPX: "534.96875px",
-          leftPX: "680.5px",
-          accessText: "Recycle bin",
-          action: "feedback",
-          feedbackurl: "feedbackip10.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp21"
-        },
-        {
-          HotspotId: 3,
           HotspotClass: "divHotSpot",
           width: "81.65829145728644%",
           height: "7.552763819095476%",
@@ -910,7 +885,27 @@ var _PData = {
           "ActionName": "hotspot"
         },
         {
-          HotspotId: 4,
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "74.5%",
+          height: "80%",
+          top: "8%",
+          left: "12%",
+          widthPX: "633px",
+          heightPX: "447px",
+          topPX: "64px",
+          leftPX: "79.5px",
+          accessText: "Finder Window",
+          action: "feedback",
+          feedbackurl: "feedbackcp10.htm",
+          isCorrect: true,
+          "score": "2",
+          "GroupName": "grp8",
+          "ActionName": "hotspot"
+        },
+                
+        {
+          HotspotId: 3,
           HotspotClass: "divHotSpot",
           width: "3.391959798994975%",
           height: "3.6850921273031827%",
@@ -928,7 +923,7 @@ var _PData = {
           "GroupName": "grp21"
         },
         {
-          HotspotId: 5,
+          HotspotId: 4,
           HotspotClass: "divHotSpot",
           width: "36.18090452261307%",
           height: "3.350083752093802%",
@@ -944,7 +939,25 @@ var _PData = {
           isCorrect: false,
           "score": "",
           "GroupName": "grp21"
-        }
+        },
+        {
+          HotspotId: 5,
+          HotspotClass: "divHotSpot",
+          width: "10.804020100502512%",
+          height: "7.050251256281408%",
+          top: "90%",
+          left: "85.48994974874373%",
+          widthPX: "86px",
+          heightPX: "64px",
+          topPX: "534.96875px",
+          leftPX: "680.5px",
+          accessText: "Recycle bin",
+          action: "feedback",
+          feedbackurl: "feedbackip10.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp21"
+        },
       ]
     }
   },
@@ -955,6 +968,25 @@ var _PData = {
         {
           HotspotId: 1,
           HotspotClass: "divHotSpot",
+          width: "81.65829145728644%",
+          height: "7.537688442211055%",
+          top: "90%",
+          left: "3.2035175879396984%",
+          widthPX: "650px",
+          heightPX: "49px",
+          topPX: "548px",
+          leftPX: "25.5px",
+          accessText: "Application Icons",
+          action: "feedback",
+          feedbackurl: "feedbackcp11.htm",
+          isCorrect: true,
+          "score": "2",
+          "GroupName": "grp9",
+          "ActionName": "hotspot"
+        },
+        {
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
           width: "74.5%",
           height: "80%",
           top: "8%",
@@ -971,45 +1003,9 @@ var _PData = {
           "GroupName": "grp22",
           "ActionName": "hotspot1"
         },
-        {
-          HotspotId: 2,
-          HotspotClass: "divHotSpot",
-          width: "10.301507537688442%",
-          height: "7.537688442211055%",
-          top: "90%",
-          left: "85.61557788944724%",
-          widthPX: "82px",
-          heightPX: "49px",
-          topPX: "545.984375px",
-          leftPX: "681.5px",
-          accessText: "Recycle bin",
-          action: "feedback",
-          feedbackurl: "feedbackip11.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp22"
-        },
+                
         {
           HotspotId: 3,
-          HotspotClass: "divHotSpot",
-          width: "81.65829145728644%",
-          height: "7.537688442211055%",
-          top: "90%",
-          left: "3.2035175879396984%",
-          widthPX: "650px",
-          heightPX: "49px",
-          topPX: "548px",
-          leftPX: "25.5px",
-          accessText: "Dock",
-          action: "feedback",
-          feedbackurl: "feedbackcp11.htm",
-          isCorrect: true,
-          "score": "2",
-          "GroupName": "grp9",
-          "ActionName": "hotspot"
-        },
-        {
-          HotspotId: 4,
           HotspotClass: "divHotSpot",
           width: "3.391959798994975%",
           height: "3.6850921273031827%",
@@ -1028,7 +1024,7 @@ var _PData = {
           "ActionName": "hotspot2"
         },
         {
-          HotspotId: 5,
+          HotspotId: 4,
           HotspotClass: "divHotSpot",
           width: "36.18090452261307%",
           height: "3.350083752093802%",
@@ -1044,34 +1040,9 @@ var _PData = {
           isCorrect: false,
           "score": "",
           "GroupName": "grp22"
-        }
-      ]
-    }
-  },
-  "p12": {
-    ImageHotSpots: {
-      "Hotspots": [
-        {
-          HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "74.5%",
-          height: "80%",
-          top: "8%",
-          left: "12%",
-          widthPX: "633px",
-          heightPX: "447px",
-          topPX: "64px",
-          leftPX: "79.5px",
-          accessText: "Finder Window",
-          action: "feedback",
-          feedbackurl: "feedbackip12.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp23",
-          "ActionName": "hotspot1"
         },
         {
-          HotspotId: 2,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "10.301507537688442%",
           height: "7.537688442211055%",
@@ -1083,13 +1054,19 @@ var _PData = {
           leftPX: "681.5px",
           accessText: "Recycle bin",
           action: "feedback",
-          feedbackurl: "feedbackip12.htm",
+          feedbackurl: "feedbackip11.htm",
           isCorrect: false,
           "score": "",
-          "GroupName": "grp23"
+          "GroupName": "grp22"
         },
+      ]
+    }
+  },
+  "p12": {
+    ImageHotSpots: {
+      "Hotspots": [
         {
-          HotspotId: 3,
+          HotspotId: 1,
           HotspotClass: "divHotSpot",
           width: "81.65829145728644%",
           height: "7.537688442211055%",
@@ -1108,7 +1085,27 @@ var _PData = {
           "ActionName": "hotspot2"
         },
         {
-          HotspotId: 4,
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "74.5%",
+          height: "80%",
+          top: "8%",
+          left: "12%",
+          widthPX: "633px",
+          heightPX: "447px",
+          topPX: "64px",
+          leftPX: "79.5px",
+          accessText: "Finder Window",
+          action: "feedback",
+          feedbackurl: "feedbackip12.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp23",
+          "ActionName": "hotspot1"
+        },
+                
+        {
+          HotspotId: 3,
           HotspotClass: "divHotSpot",
           width: "3.391959798994975%",
           height: "3.6850921273031827%",
@@ -1127,7 +1124,7 @@ var _PData = {
           "ActionName": "hotspot"
         },
         {
-          HotspotId: 5,
+          HotspotId: 4,
           HotspotClass: "divHotSpot",
           width: "36.18090452261307%",
           height: "3.350083752093802%",
@@ -1143,35 +1140,9 @@ var _PData = {
           accessText: "Menu Bar",
           "score": "",
           "GroupName": "grp23"
-        }
-      ]
-
-    }
-  },
-  "p13": {
-    ImageHotSpots: {
-      "Hotspots": [
-        {
-          HotspotId: 1,
-          HotspotClass: "divHotSpot",
-          width: "74.5%",
-          height: "80%",
-          top: "8%",
-          left: "12%",
-          widthPX: "633px",
-          heightPX: "447px",
-          topPX: "64px",
-          leftPX: "79.5px",
-          accessText: "Finder Window",
-          action: "feedback",
-          feedbackurl: "feedbackip13.htm",
-          isCorrect: false,
-          "score": "",
-          "GroupName": "grp24",
-          "ActionName": "hotspot1"
         },
         {
-          HotspotId: 2,
+          HotspotId: 5,
           HotspotClass: "divHotSpot",
           width: "10.301507537688442%",
           height: "7.537688442211055%",
@@ -1183,13 +1154,20 @@ var _PData = {
           leftPX: "681.5px",
           accessText: "Recycle bin",
           action: "feedback",
-          feedbackurl: "feedbackip13.htm",
+          feedbackurl: "feedbackip12.htm",
           isCorrect: false,
           "score": "",
-          "GroupName": "grp24"
+          "GroupName": "grp23"
         },
+      ]
+
+    }
+  },
+  "p13": {
+    ImageHotSpots: {
+      "Hotspots": [
         {
-          HotspotId: 3,
+          HotspotId: 1,
           HotspotClass: "divHotSpot",
           width: "81.65829145728644%",
           height: "7.537688442211055%",
@@ -1208,7 +1186,27 @@ var _PData = {
           "ActionName": "hotspot2"
         },
         {
-          HotspotId: 4,
+          HotspotId: 2,
+          HotspotClass: "divHotSpot",
+          width: "74.5%",
+          height: "80%",
+          top: "8%",
+          left: "12%",
+          widthPX: "633px",
+          heightPX: "447px",
+          topPX: "64px",
+          leftPX: "79.5px",
+          accessText: "Finder Window",
+          action: "feedback",
+          feedbackurl: "feedbackip13.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp24",
+          "ActionName": "hotspot1"
+        },
+                
+        {
+          HotspotId: 3,
           HotspotClass: "divHotSpot",
           width: "3.391959798994975%",
           height: "3.6850921273031827%",
@@ -1227,7 +1225,7 @@ var _PData = {
           "ActionName": "hotspot3"
         },
         {
-          HotspotId: 5,
+          HotspotId: 4,
           HotspotClass: "divHotSpot",
           width: "35.92964824120603%",
           height: "4.0201005025125625%",
@@ -1244,7 +1242,25 @@ var _PData = {
           "score": "2",
           "GroupName": "grp11",
           "ActionName": "hotspot"
-        }
+        },
+        {
+          HotspotId: 5,
+          HotspotClass: "divHotSpot",
+          width: "10.301507537688442%",
+          height: "7.537688442211055%",
+          top: "90%",
+          left: "85.61557788944724%",
+          widthPX: "82px",
+          heightPX: "49px",
+          topPX: "545.984375px",
+          leftPX: "681.5px",
+          accessText: "Recycle bin",
+          action: "feedback",
+          feedbackurl: "feedbackip13.htm",
+          isCorrect: false,
+          "score": "",
+          "GroupName": "grp24"
+        },
       ]
     }
   },

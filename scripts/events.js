@@ -408,7 +408,7 @@ $(document).on("click touchstart", ".droppable1", function (event) {
     $(".assertivespan").text("Ms Paint pinned to taskbar")
   }
   else{
-    $(".assertivespan").text("Ms Paint added to dock")
+    $(".assertivespan").text("Firefox added to dock")
   }
   $(".activityimg,.firefox_image,.mspaint_image,#droppable").hide();
     $(".dropimage").show();
