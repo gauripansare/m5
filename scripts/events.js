@@ -401,6 +401,7 @@ $(document).on("click touchstart", ".droppable1", function (event) {
     var draggable = $('.selected');
    
   //  $(this).addClass("ui-state-highlight")
+  if(!isIphone){
   if (isIOS) {
     $(".assertivespan").attr("role","alert");
   }
@@ -410,6 +411,7 @@ $(document).on("click touchstart", ".droppable1", function (event) {
   else{
     $(".assertivespan").text("Firefox added to dock")
   }
+}
   $(".activityimg,.firefox_image,.mspaint_image,#droppable").hide();
     $(".dropimage").show();
     setTimeout(function(){
