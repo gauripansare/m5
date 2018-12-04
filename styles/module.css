@@ -683,4 +683,11 @@ input[type="checkbox"].disabled{
     .hintlink{
         left: 66%;
     }
+    .activityBlc li div{
+        position: absolute;
+    }
+    .activityBlc li label{
+        display: inline-block;
+        margin-left:25px;
+    }
 }
