@@ -259,7 +259,8 @@ var _ModuleCommon = (function () {
             var fdbkUrl = _Settings.dataRoot + "feedbackdata/" + pageData.DNDSettings.feedbackurl;
             $(".PSDdraggble").k_disable();
 
-            _Navigator.SetPageStatus(true);
+            _Navigator.SetPageStatus(true);            
+            _Navigator.GetBookmarkData();
             $("#div_feedback").show();
             $("#div_feedback").css("display", "inline-block");
             $("#div_feedback .div_fdkcontent").load(fdbkUrl, function () {
@@ -348,7 +349,6 @@ var _ModuleCommon = (function () {
                     $(this).addClass("ui-state-highlight")
                     $(".activityimg,.firefox_image,.mspaint_image,#droppable").hide();
                     $(".dropimage").show();
-
                     _ModuleCommon.DNDFeedback();
 
                 }
@@ -537,7 +537,6 @@ var _ModuleCommon = (function () {
             }
         },
         PresenterMode: function () {
-            debugger;
             var currentPageData = _Navigator.GetCurrentPage();
             var pageData = this.GetPageDetailData();
             var appendImage = $(".wrapperimage");
