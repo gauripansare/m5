@@ -596,6 +596,9 @@ var _Navigator = (function () {
                                     $("h2").attr("tabindex", "0");
                                     $("h2").focus();
                                 }
+                                else if(_currentPageObject.pageId == "p28" || _currentPageObject.pageId == "p18"){
+                                    $(".EmbededElement").focus();
+                                }
                                 else {
                                     if (isChrome && !isAndroid) {
                                         $("h2").attr("tabindex", "0");
@@ -860,7 +863,7 @@ var _Navigator = (function () {
             bookmarkobj.BMretrycnt = retrycnt;
             //bookmarkobj.BMg_RuntimeData = _ModuleCommon.Getg_RuntimeData();
             bookmarkobj.VisistedPages = this.GetNavigatorBMData();
-            bookmarkobj.ProgressLevels = progressLevels;
+            //bookmarkobj.ProgressLevels = progressLevels;
             bookmarkobj.ReviewData = _ModuleCommon.GetReviewData();
             bookmarkobj.AssessmentData = _Assessment.Getbookmarkdata();
             if (this.IsRevel()) {
@@ -919,7 +922,7 @@ var _Navigator = (function () {
                 retrycnt = bookmarkdata.BMretrycnt;
                 //_ModuleCommon.Setg_RuntimeData(bookmarkdata.BMg_RuntimeData);
                 this.SetNavigatorBMData(bookmarkdata.VisistedPages)
-                progressLevels = bookmarkdata.ProgressLevels;
+                //progressLevels = bookmarkdata.ProgressLevels;
                 _ModuleCommon.SetReviewData(bookmarkdata.ReviewData)
                 _Assessment.Setbookmarkdata(bookmarkdata.AssessmentData)
             }
