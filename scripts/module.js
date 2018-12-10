@@ -486,7 +486,7 @@ var _ModuleCommon = (function () {
             this.LoadHotSpot();
             this.ApplycontainerWidth();
             $("#div_feedback").hide();
-            if (_Navigator.IsAnswered()) {
+            if (_Navigator.IsAnswered() && !_Navigator.IsPresenterMode()) {
                 this.DisplayInstructorReviewMode();
             }
             var _currentPageObject = _Navigator.GetCurrentPage();
