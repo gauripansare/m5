@@ -1,7 +1,7 @@
 ﻿//This api will contain navigation logic and page load.
 //It will also handle the question navigation if the page is having multiple questions.
 var _Navigator = (function () {
-    var packageType = "";//presenter/scorm/revel
+    var packageType = "scorm";//presenter/scorm/revel
     var isReviewMode = false;
     var _currentPageId = "";
     var _currentPageObject = {};
@@ -11,6 +11,7 @@ var _Navigator = (function () {
     var bookmarkpageid = "";
     var retrycnt = 1;
     var quizpageid = "p46";
+    var Summarybookmark = false;
     var _NData = {
         "p1": {
             pageId: "p1",
@@ -463,6 +464,12 @@ var _Navigator = (function () {
             _ModuleCommon.AppendFooter();
         }
         if (_Navigator.IsReviewMode()) {
+            currentQuestionIndex = 0;
+            $(".divHotSpotCommon").k_disable();
+            $(".ui-droppable").k_disable();
+            $(".dragdiv ").k_disable();
+            $("input[type='text']").k_disable();
+            $(".divHotSpot ").k_disable();
             $("#linknext").k_enable();
             $(".start-btn").k_disable();
         }
@@ -638,9 +645,32 @@ var _Navigator = (function () {
                         }
                         if (_currentPageId == quizpageid)//  change to assessment id
                         {
-                            _Assessment.ShowQuestion();
-                            $("h2.pageheading").attr("tabindex", "0");
-                            $("h2").focus();
+                            if (Summarybookmark) {
+
+                                $(".intro-content-question").hide();
+                                $(".questionwrapper").hide();
+                                $("#Summary").show();
+                                $("#Questioninfo").hide();
+                                $("#Summary").load("pagedata/Summary.htm", function () {
+                                    _Assessment.ShowSummary();
+                                    if (isChrome && !isAndroid) {
+                                        $("h2.pageheading").attr("tabindex", "0");
+                                        $("h2").focus();
+                                    }
+                                    else {
+                                        $("#progressdiv").focus();
+                                    }
+                                    $("#linkprevious").k_enable();
+
+                                })
+                                $("#climate-deal").css("margin-left", "23%");
+                                $("#linknext").k_disable();
+                            }
+                            else {
+                                _Assessment.ShowQuestion();
+                                $("h2.pageheading").attr("tabindex", "0");
+                                $("h2").focus();
+                            }
                         }
 
                         $("#hintdiv").show();
@@ -687,8 +717,12 @@ var _Navigator = (function () {
             }
 
         },
+         GetSummarybookmark: function () {
+            return Summarybookmark;
+        },
 
         Prev: function () {
+            Summarybookmark = false;
             if (_Navigator.IsRevel()) {
                 LifeCycleEvents.OnInteraction("Previous link click.")
             }
@@ -706,6 +740,7 @@ var _Navigator = (function () {
             }
         },
         Next: function () {
+            Summarybookmark = false;
             if (_Navigator.IsRevel()) {
                 LifeCycleEvents.OnInteraction("Previous link click.")
             }
@@ -719,7 +754,7 @@ var _Navigator = (function () {
                     currentQuestionIndex = currentQuestionIndex + 1
                     $("#Questioninfo").show();
                     _Assessment.ShowQuestion()
-                    if (gRecordData.Status != "Completed" && !this.IsPresenterMode()) {
+                    if (gRecordData.Status != "Completed" && !this.IsPresenterMode() && !this.IsReviewMode()) {
                         $("#linknext").k_disable();
                         $("#linkprevious").k_disable();
                     }
@@ -734,6 +769,8 @@ var _Navigator = (function () {
                     $("#Summary").show();
                     $("#Questioninfo").hide();
                     $("#Summary").load("pagedata/Summary.htm", function () {
+                        Summarybookmark = true;
+                        _Navigator.GetBookmarkData();
                         _Assessment.ShowSummary();
                         if (isChrome && !isAndroid) {
                             $("h2.pageheading").attr("tabindex", "0");
@@ -857,7 +894,7 @@ var _Navigator = (function () {
             }
         },
         GetBookmarkData: function () {
-            if (!this.IsScorm() && !this.IsRevel())
+            if (!this.IsScorm() && !this.IsRevel() && this.IsReviewMode())
                 return;
             var bookmarkobj = {}
             bookmarkobj.BMPageId = bookmarkpageid;
@@ -867,6 +904,7 @@ var _Navigator = (function () {
             bookmarkobj.ProgressLevels = progressLevels;
             bookmarkobj.ReviewData = _ModuleCommon.GetReviewData();
             bookmarkobj.AssessmentData = _Assessment.Getbookmarkdata();
+            bookmarkobj.Summarybookmark = _Navigator.GetSummarybookmark();
             if (this.IsRevel()) {
                 if (k_Revel.get_LaunchData().mode == LaunchModes.do) {
                     var suspend_data = JSON.stringify(bookmarkobj);
@@ -902,6 +940,9 @@ var _Navigator = (function () {
         },
 
         SetBookMarkPage: function () {
+            if(this.IsReviewMode()){
+                return;
+            }
             if (!this.IsScorm() && !this.IsRevel())
                 return;
             if (this.IsScorm()) {
@@ -925,6 +966,7 @@ var _Navigator = (function () {
                 bookmarkdata = JSON.parse(bookmarkdata);
                 bookmarkpageid = bookmarkdata.BMPageId;
                 retrycnt = bookmarkdata.BMretrycnt;
+                Summarybookmark = bookmarkdata.Summarybookmark
                 //_ModuleCommon.Setg_RuntimeData(bookmarkdata.BMg_RuntimeData);
                 this.SetNavigatorBMData(bookmarkdata.VisistedPages)
                 progressLevels = bookmarkdata.ProgressLevels;
@@ -988,9 +1030,13 @@ var _Navigator = (function () {
             }
         },
         GotoBookmarkPage: function () {
-
-            if (bookmarkpageid != undefined && bookmarkpageid != "") {
-                _Navigator.LoadPage(bookmarkpageid)
+            if (bookmarkpageid != undefined && bookmarkpageid != "" && !this.IsReviewMode()) {
+                if (Summarybookmark) {
+                    _Navigator.LoadPage(quizpageid);
+                }
+                else {
+                    _Navigator.LoadPage(bookmarkpageid)
+                }
             }
             else {
                 _Navigator.Start();
