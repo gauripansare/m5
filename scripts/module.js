@@ -142,7 +142,10 @@ var _ModuleCommon = (function () {
                 var p = "";
                 for (i = 0; i < reviewData.textEntry.length; i++) {
                     if (reviewData.textEntry[i] != undefined && reviewData.textEntry[i] != "") {
-                        var tEntry = reviewData.textEntry[i].trim().toLowerCase();
+                        var tEntry = reviewData.textEntry[i].trim();
+                        tEntry = tEntry.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+                            return letter.toUpperCase();
+                        });
                         if (pageDetailData.EmbedSettings.validatearray.indexOf(tEntry) >= 0) {
                             if (reviewData.isCorrect && i == 0) {
                                 $(".textentryreview1").html("<span class='OpenSansFont' style='color:" + ColorCodes.green + ";font-weight:bold;font-size: 13px; '>" + reviewData.textEntry[i] + "</span>");
