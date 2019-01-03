@@ -489,7 +489,7 @@ var _ModuleCommon = (function () {
             this.LoadHotSpot();
             this.ApplycontainerWidth();
             $("#div_feedback").hide();
-            if (_Navigator.IsAnswered() && !_Navigator.IsPresenterMode()) {
+            if (_Navigator.IsAnswered()) {
                 this.DisplayInstructorReviewMode();
             }
             var _currentPageObject = _Navigator.GetCurrentPage();
@@ -540,6 +540,7 @@ var _ModuleCommon = (function () {
             }
         },
         PresenterMode: function () {
+            /*
             var currentPageData = _Navigator.GetCurrentPage();
             var pageData = this.GetPageDetailData();
             var appendImage = $(".wrapperimage");
@@ -575,12 +576,13 @@ var _ModuleCommon = (function () {
                     }
                 }
             }
-            //}
-            $("#linknext").k_enable();
+            //}            
             if (currentPageData.pageId != "p10") {
                 _Navigator.SetPageStatus(true);
             }
             _Navigator.UpdateProgressBar();
+            */
+            $("#linknext").k_enable();
         },
         ApplycontainerWidth: function () {
             var innerWidth = $(window).width();
