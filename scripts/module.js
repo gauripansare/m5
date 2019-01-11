@@ -501,7 +501,7 @@ var _ModuleCommon = (function () {
                 _ModuleCommon.ButtonActivity();
             }
             if (_Navigator.IsPresenterMode() == true) {
-                $(".startbtn").k_disable();
+                //$(".startbtn").k_disable();
                 $("#linknext").k_enable();
                 this.PresenterMode();
             }
