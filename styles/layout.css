@@ -79,7 +79,7 @@ div, p, span, input {
 
     .modulebtn:focus, .mspaint_image:focus, .ui-droppable:focus, a:focus, input:focus, button:focus, textarea:focus, select:focus, .mspaint_image:active, .ui-droppable:active, a:active, input:active,     button:active, textarea:active, select:active,    .questioninnerwrapper input[type="radio"]:focus + .inputcircle::after,
     #Summary input[type="radio"]:focus + .inputcircle::after, input[type="radio"]:focus + label {
-    outline: #ff8c00 auto 4px;
+    outline: #ff8c00 solid 2px;
     }
 
     

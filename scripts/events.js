@@ -363,6 +363,17 @@ $(document).on("mouseup", ".dragdiv", function (event) {
     }
 
 });
+$(document).on("keyup", ".dragdiv", function (event) {
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (event) {
+        key = event.keyCode;
+    }
+    if (key == 13) {
+        $(this).trigger("click")
+    }
+
+});
 $(document).on("click", ".dragdiv", function (event) {
 
     if ($(this).attr("disabled") || $(this).hasClass("disabled")) {
@@ -394,7 +405,17 @@ $(document).on("mousedown", ".droppable1", function (event) {
     }
 
 });
+$(document).on("keyup", ".droppable1", function (event) {
+    if (window.event) {
+        key = window.event.keyCode;
+    } else if (event) {
+        key = event.keyCode;
+    }
+    if (key == 13) {
+        $(this).trigger("click")
+    }
 
+});
 $(document).on("click touchstart", ".droppable1", function (event) {
     if ($('.selected').length == 0)
         return;

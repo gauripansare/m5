@@ -414,10 +414,10 @@
     .windows_taskbar
     {
         position: absolute;
-        width: 370px;
-        height: 47px;
-        top: 550px;/*452px;*/
-        left: 285px; 
+    width: 370px;
+    height: 32px;
+    top: 562px;
+    left: 285px;
     }
     .mac_taskbar
     {
