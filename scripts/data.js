@@ -28,6 +28,7 @@ var isIpad = userAgentCustom.match(/iPad/i)
 var isIphone = (navigator.userAgent.match(/iPhone/i))
 var isIEEdge = /Edge/.test(navigator.userAgent)
 var Firefox = /Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)
+var ipad = !!navigator.platform && /iPad|iPod/.test(navigator.platform);
 var animeTime = 1000;
 if(isIphone != null){
     animeTime = 3000;

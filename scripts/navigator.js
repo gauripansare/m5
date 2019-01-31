@@ -492,6 +492,9 @@ var _Navigator = (function () {
         if ((navigator.userAgent.match(/iPhone/i)) && (_currentPageObject.pageId == "p44" || _currentPageObject.pageId == "p45")) {
             $(".droppable1").attr("role", "button");
         }
+        if ((!!navigator.platform && /iPad|iPod/.test(navigator.platform)) && (_currentPageObject.pageId == "p44" || _currentPageObject.pageId == "p45")) {
+            $(".droppable1").attr("role", "text");
+        }
     }
     return {
         Get: function () {

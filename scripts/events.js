@@ -374,7 +374,7 @@ $(document).on("keyup", ".dragdiv", function (event) {
     }
 
 });
-$(document).on("click", ".dragdiv", function (event) {
+$(document).on("click touchstart", ".dragdiv", function (event) {
 
     if ($(this).attr("disabled") || $(this).hasClass("disabled")) {
         $(".droppable1").css({
